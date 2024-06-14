@@ -40,7 +40,6 @@ namespace Personajes
         private int agilidad;
         private int resistencia;
         private int energia;
-        private int transformacion;
 
         public Caracteristicas()
         {
@@ -50,8 +49,6 @@ namespace Personajes
             agilidad = 0;
             resistencia = 0;
             energia = 0;
-            transformacion = 0;
-
         }
 
 
@@ -61,13 +58,6 @@ namespace Personajes
         public int Agilidad { get => agilidad; set => agilidad = value; }
         public int Resistencia { get => resistencia; set => resistencia = value; }
         public int Energia { get => energia; set => energia = value; }
-        public int Transformacion { get => transformacion; set => transformacion = value; }
-    }
-
-    public enum generoPj
-    {
-        Femenino,
-        Masculino
     }
 
 }

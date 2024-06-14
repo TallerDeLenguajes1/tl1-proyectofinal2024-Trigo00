@@ -8,13 +8,12 @@
       "Ki": "60.000.000"
     },
     "Caracteristicas": {
-      "Fuerza": 69,
-      "Salud": 8,
-      "Velocidad": 93,
-      "Agilidad": 37,
-      "Resistencia": 12,
-      "Energia": 21,
-      "Transformacion": 0
+      "Fuerza": 45,
+      "Salud": 21,
+      "Velocidad": 30,
+      "Agilidad": 35,
+      "Resistencia": 86,
+      "Energia": 80
     }
   },
   {
@@ -26,13 +25,12 @@
       "Ki": "54.000.000"
     },
     "Caracteristicas": {
-      "Fuerza": 1,
-      "Salud": 66,
-      "Velocidad": 45,
-      "Agilidad": 7,
-      "Resistencia": 10,
-      "Energia": 36,
-      "Transformacion": 0
+      "Fuerza": 28,
+      "Salud": 69,
+      "Velocidad": 55,
+      "Agilidad": 56,
+      "Resistencia": 6,
+      "Energia": 8
     }
   },
   {
@@ -45,12 +43,11 @@
     },
     "Caracteristicas": {
       "Fuerza": 44,
-      "Salud": 38,
-      "Velocidad": 24,
-      "Agilidad": 74,
-      "Resistencia": 52,
-      "Energia": 61,
-      "Transformacion": 0
+      "Salud": 84,
+      "Velocidad": 86,
+      "Agilidad": 79,
+      "Resistencia": 45,
+      "Energia": 20
     }
   },
   {
@@ -62,13 +59,12 @@
       "Ki": "0"
     },
     "Caracteristicas": {
-      "Fuerza": 82,
-      "Salud": 91,
-      "Velocidad": 37,
-      "Agilidad": 44,
-      "Resistencia": 39,
-      "Energia": 14,
-      "Transformacion": 0
+      "Fuerza": 60,
+      "Salud": 54,
+      "Velocidad": 93,
+      "Agilidad": 73,
+      "Resistencia": 20,
+      "Energia": 36
     }
   },
   {
@@ -80,13 +76,12 @@
       "Ki": "530.000"
     },
     "Caracteristicas": {
-      "Fuerza": 2,
-      "Salud": 90,
-      "Velocidad": 17,
-      "Agilidad": 2,
-      "Resistencia": 93,
-      "Energia": 63,
-      "Transformacion": 0
+      "Fuerza": 71,
+      "Salud": 7,
+      "Velocidad": 9,
+      "Agilidad": 89,
+      "Resistencia": 76,
+      "Energia": 27
     }
   },
   {
@@ -98,13 +93,12 @@
       "Ki": "20.000"
     },
     "Caracteristicas": {
-      "Fuerza": 77,
-      "Salud": 57,
-      "Velocidad": 82,
-      "Agilidad": 40,
-      "Resistencia": 76,
-      "Energia": 13,
-      "Transformacion": 0
+      "Fuerza": 49,
+      "Salud": 78,
+      "Velocidad": 75,
+      "Agilidad": 7,
+      "Resistencia": 17,
+      "Energia": 8
     }
   },
   {
@@ -116,13 +110,12 @@
       "Ki": "18.000"
     },
     "Caracteristicas": {
-      "Fuerza": 17,
-      "Salud": 10,
-      "Velocidad": 73,
-      "Agilidad": 24,
-      "Resistencia": 15,
-      "Energia": 60,
-      "Transformacion": 0
+      "Fuerza": 74,
+      "Salud": 24,
+      "Velocidad": 15,
+      "Agilidad": 80,
+      "Resistencia": 87,
+      "Energia": 17
     }
   },
   {
@@ -134,13 +127,12 @@
       "Ki": "9.000"
     },
     "Caracteristicas": {
-      "Fuerza": 83,
-      "Salud": 34,
-      "Velocidad": 23,
-      "Agilidad": 40,
-      "Resistencia": 81,
-      "Energia": 68,
-      "Transformacion": 0
+      "Fuerza": 44,
+      "Salud": 85,
+      "Velocidad": 81,
+      "Agilidad": 91,
+      "Resistencia": 80,
+      "Energia": 36
     }
   },
   {
@@ -152,13 +144,12 @@
       "Ki": "250.000.000"
     },
     "Caracteristicas": {
-      "Fuerza": 58,
-      "Salud": 50,
-      "Velocidad": 94,
-      "Agilidad": 13,
-      "Resistencia": 47,
-      "Energia": 25,
-      "Transformacion": 0
+      "Fuerza": 57,
+      "Salud": 53,
+      "Velocidad": 12,
+      "Agilidad": 38,
+      "Resistencia": 19,
+      "Energia": 84
     }
   },
   {
@@ -170,13 +161,12 @@
       "Ki": "45.000.000"
     },
     "Caracteristicas": {
-      "Fuerza": 43,
-      "Salud": 95,
-      "Velocidad": 17,
-      "Agilidad": 9,
-      "Resistencia": 60,
-      "Energia": 10,
-      "Transformacion": 0
+      "Fuerza": 24,
+      "Salud": 74,
+      "Velocidad": 14,
+      "Agilidad": 44,
+      "Resistencia": 4,
+      "Energia": 8
     }
   }
 ]
