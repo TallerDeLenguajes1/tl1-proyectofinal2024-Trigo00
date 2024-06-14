@@ -1,0 +1,182 @@
+[
+  {
+    "Datos": {
+      "Nombre": "Goku",
+      "Raza": "Saiyan",
+      "Genero": "Masculino",
+      "Descripcion": "El protagonista de la serie, conocido por su gran poder y personalidad amigable. Originalmente enviado a la Tierra como un infante volador con la misi\u00F3n de conquistarla. Sin embargo, el caer por un barranco le proporcion\u00F3 un brutal golpe que si bien casi lo mata, este alter\u00F3 su memoria y anul\u00F3 todos los instintos violentos de su especie, lo que lo hizo crecer con un coraz\u00F3n puro y bondadoso, pero conservando todos los poderes de su raza. No obstante, en la nueva continuidad de Dragon Ball se establece que \u00E9l fue enviado por sus padres a la Tierra con el objetivo de sobrevivir a toda costa a la destrucci\u00F3n de su planeta por parte de Freeza. M\u00E1s tarde, Kakarot, ahora conocido como Son Goku, se convertir\u00EDa en el pr\u00EDncipe consorte del monte Fry-pan y l\u00EDder de los Guerreros Z, as\u00ED como el mayor defensor de la Tierra y del Universo 7, logrando mantenerlos a salvo de la destrucci\u00F3n en innumerables ocasiones, a pesar de no considerarse a s\u00ED mismo como un h\u00E9roe o salvador.",
+      "Ki": "60.000.000"
+    },
+    "Caracteristicas": {
+      "Fuerza": 69,
+      "Salud": 8,
+      "Velocidad": 93,
+      "Agilidad": 37,
+      "Resistencia": 12,
+      "Energia": 21,
+      "Transformacion": 0
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Vegeta",
+      "Raza": "Saiyan",
+      "Genero": "Masculino",
+      "Descripcion": "Pr\u00EDncipe de los Saiyans, inicialmente un villano, pero luego se une a los Z Fighters. A pesar de que a inicios de Dragon Ball Z, Vegeta cumple un papel antag\u00F3nico, poco despu\u00E9s decide rebelarse ante el Imperio de Freeza, volvi\u00E9ndose un aliado clave para los Guerreros Z. Con el paso del tiempo llegar\u00EDa a cambiar su manera de ser, optando por permanecer y vivir en la Tierra para luchar a su lado contra las inminentes adversidades que superar. Junto con Piccolo, \u00E9l es de los antiguos enemigos de Goku que ha evolucionando al pasar de ser un villano y antih\u00E9roe, a finalmente un h\u00E9roe a lo largo del transcurso de la historia, convirti\u00E9ndose as\u00ED en el deuteragonista de la serie.",
+      "Ki": "54.000.000"
+    },
+    "Caracteristicas": {
+      "Fuerza": 1,
+      "Salud": 66,
+      "Velocidad": 45,
+      "Agilidad": 7,
+      "Resistencia": 10,
+      "Energia": 36,
+      "Transformacion": 0
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Piccolo",
+      "Raza": "Namekian",
+      "Genero": "Masculino",
+      "Descripcion": "Es un namekiano que surgi\u00F3 tras ser creado en los \u00FAltimos momentos de vida de su padre, siendo su actual reencarnaci\u00F3n. Aunque en un principio fue el archienemigo de Son Goku, con el paso del tiempo fue haci\u00E9ndose menos malvado hasta finalmente convertirse en un ser bondadoso y miembro de los Guerreros Z. A trav\u00E9s del tiempo, tambi\u00E9n comenz\u00F3 a tomarle cari\u00F1o a su disc\u00EDpulo Son Gohan, a quien ve\u00EDa como una especie de \u0022v\u00E1stago\u0022 y formando un lazo de amistad con este.",
+      "Ki": "2.000.000"
+    },
+    "Caracteristicas": {
+      "Fuerza": 44,
+      "Salud": 38,
+      "Velocidad": 24,
+      "Agilidad": 74,
+      "Resistencia": 52,
+      "Energia": 61,
+      "Transformacion": 0
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Bulma",
+      "Raza": "Human",
+      "Genero": "Femenino",
+      "Descripcion": "Bulma es la protagonista femenina de la serie manga Dragon Ball y sus adaptaciones al anime Dragon Ball, Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es hija del Dr. Brief y su esposa Panchy, hermana menor de Tights y una gran amiga de Son Goku con quien inicia la b\u00FAsqueda de las Esferas del Drag\u00F3n. En Dragon Ball Z tuvo a Trunks, primog\u00E9nito de quien ser\u00EDa su esposo Vegeta, a su hija Bra[3] y su hijo adulto del tiempo alterno Trunks del Futuro Alternativo.",
+      "Ki": "0"
+    },
+    "Caracteristicas": {
+      "Fuerza": 82,
+      "Salud": 91,
+      "Velocidad": 37,
+      "Agilidad": 44,
+      "Resistencia": 39,
+      "Energia": 14,
+      "Transformacion": 0
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Freezer",
+      "Raza": "Frieza Race",
+      "Genero": "Masculino",
+      "Descripcion": "Freezer es el tirano espacial y el principal antagonista de la saga de Freezer.",
+      "Ki": "530.000"
+    },
+    "Caracteristicas": {
+      "Fuerza": 2,
+      "Salud": 90,
+      "Velocidad": 17,
+      "Agilidad": 2,
+      "Resistencia": 93,
+      "Energia": 63,
+      "Transformacion": 0
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Zarbon",
+      "Raza": "Frieza Race",
+      "Genero": "Masculino",
+      "Descripcion": "Zarbon es uno de los secuaces de Freezer y un luchador poderoso.",
+      "Ki": "20.000"
+    },
+    "Caracteristicas": {
+      "Fuerza": 77,
+      "Salud": 57,
+      "Velocidad": 82,
+      "Agilidad": 40,
+      "Resistencia": 76,
+      "Energia": 13,
+      "Transformacion": 0
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Dodoria",
+      "Raza": "Frieza Race",
+      "Genero": "Masculino",
+      "Descripcion": "Dodoria es otro secuaz de Freezer conocido por su brutalidad.",
+      "Ki": "18.000"
+    },
+    "Caracteristicas": {
+      "Fuerza": 17,
+      "Salud": 10,
+      "Velocidad": 73,
+      "Agilidad": 24,
+      "Resistencia": 15,
+      "Energia": 60,
+      "Transformacion": 0
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Ginyu",
+      "Raza": "Frieza Race",
+      "Genero": "Masculino",
+      "Descripcion": "Ginyu es el l\u00EDder del la \u00E9lite de mercenarios de mayor prestigio del Ej\u00E9rcito de Freeza, la cual lleva el nombre de Fuerzas Especiales Ginew en su honor[9].",
+      "Ki": "9.000"
+    },
+    "Caracteristicas": {
+      "Fuerza": 83,
+      "Salud": 34,
+      "Velocidad": 23,
+      "Agilidad": 40,
+      "Resistencia": 81,
+      "Energia": 68,
+      "Transformacion": 0
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Celula",
+      "Raza": "Android",
+      "Genero": "Masculino",
+      "Descripcion": "Cell conocido como C\u00E9lula en Espa\u00F1a, es un bioandroide creado por la computadora del Dr. Gero, quien vino del futuro de la l\u00EDnea 3 con la intenci\u00F3n de vengarse de Goku por haber acabado con el Ej\u00E9rcito del List\u00F3n Rojo, y con ello el sue\u00F1o de todo villano: dominar el mundo. Es el antagonista principal del Arco de los Androides y Cell.",
+      "Ki": "250.000.000"
+    },
+    "Caracteristicas": {
+      "Fuerza": 58,
+      "Salud": 50,
+      "Velocidad": 94,
+      "Agilidad": 13,
+      "Resistencia": 47,
+      "Energia": 25,
+      "Transformacion": 0
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Gohan",
+      "Raza": "Saiyan",
+      "Genero": "Masculino",
+      "Descripcion": "Son Gohanda en su tiempo en Espa\u00F1a, o simplemente Gohan en Hispanoam\u00E9rica, es uno de los personajes principales de los arcos argumentales de Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es un mestizo entre saiyano y humano terr\u00EDcola. Es el primer hijo de Son Goku y Chi-Chi, hermano mayor de Son Goten, esposo de Videl y padre de Pan.",
+      "Ki": "45.000.000"
+    },
+    "Caracteristicas": {
+      "Fuerza": 43,
+      "Salud": 95,
+      "Velocidad": 17,
+      "Agilidad": 9,
+      "Resistencia": 60,
+      "Energia": 10,
+      "Transformacion": 0
+    }
+  }
+]
