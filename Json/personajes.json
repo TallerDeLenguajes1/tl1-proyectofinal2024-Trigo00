@@ -4,16 +4,16 @@
       "Nombre": "Goku",
       "Raza": "Saiyan",
       "Genero": "Masculino",
-      "Descripcion": "El protagonista de la serie, conocido por su gran poder y personalidad amigable. Originalmente enviado a la Tierra como un infante volador con la misi\u00F3n de conquistarla. Sin embargo, el caer por un barranco le proporcion\u00F3 un brutal golpe que si bien casi lo mata, este alter\u00F3 su memoria y anul\u00F3 todos los instintos violentos de su especie, lo que lo hizo crecer con un coraz\u00F3n puro y bondadoso, pero conservando todos los poderes de su raza. No obstante, en la nueva continuidad de Dragon Ball se establece que \u00E9l fue enviado por sus padres a la Tierra con el objetivo de sobrevivir a toda costa a la destrucci\u00F3n de su planeta por parte de Freeza. M\u00E1s tarde, Kakarot, ahora conocido como Son Goku, se convertir\u00EDa en el pr\u00EDncipe consorte del monte Fry-pan y l\u00EDder de los Guerreros Z, as\u00ED como el mayor defensor de la Tierra y del Universo 7, logrando mantenerlos a salvo de la destrucci\u00F3n en innumerables ocasiones, a pesar de no considerarse a s\u00ED mismo como un h\u00E9roe o salvador.",
+      "Descripcion": "El protagonista de la serie, conocido por su gran poder y personalidad amigable. Originalmente enviado a la Tierra como un infante volador con la misión de conquistarla. Sin embargo, el caer por un barranco le proporcionó un brutal golpe que si bien casi lo mata, este alteró su memoria y anuló todos los instintos violentos de su especie, lo que lo hizo crecer con un corazón puro y bondadoso, pero conservando todos los poderes de su raza. No obstante, en la nueva continuidad de Dragon Ball se establece que él fue enviado por sus padres a la Tierra con el objetivo de sobrevivir a toda costa a la destrucción de su planeta por parte de Freeza. Más tarde, Kakarot, ahora conocido como Son Goku, se convertiría en el príncipe consorte del monte Fry-pan y líder de los Guerreros Z, así como el mayor defensor de la Tierra y del Universo 7, logrando mantenerlos a salvo de la destrucción en innumerables ocasiones, a pesar de no considerarse a sí mismo como un héroe o salvador.",
       "Ki": "60.000.000"
     },
     "Caracteristicas": {
-      "Fuerza": 45,
-      "Salud": 21,
-      "Velocidad": 30,
-      "Agilidad": 35,
-      "Resistencia": 86,
-      "Energia": 80
+      "Fuerza": 13,
+      "Salud": 10,
+      "Velocidad": 66,
+      "Agilidad": 5,
+      "Resistencia": 4,
+      "Energia": 66
     }
   },
   {
@@ -21,16 +21,16 @@
       "Nombre": "Vegeta",
       "Raza": "Saiyan",
       "Genero": "Masculino",
-      "Descripcion": "Pr\u00EDncipe de los Saiyans, inicialmente un villano, pero luego se une a los Z Fighters. A pesar de que a inicios de Dragon Ball Z, Vegeta cumple un papel antag\u00F3nico, poco despu\u00E9s decide rebelarse ante el Imperio de Freeza, volvi\u00E9ndose un aliado clave para los Guerreros Z. Con el paso del tiempo llegar\u00EDa a cambiar su manera de ser, optando por permanecer y vivir en la Tierra para luchar a su lado contra las inminentes adversidades que superar. Junto con Piccolo, \u00E9l es de los antiguos enemigos de Goku que ha evolucionando al pasar de ser un villano y antih\u00E9roe, a finalmente un h\u00E9roe a lo largo del transcurso de la historia, convirti\u00E9ndose as\u00ED en el deuteragonista de la serie.",
+      "Descripcion": "Príncipe de los Saiyans, inicialmente un villano, pero luego se une a los Z Fighters. A pesar de que a inicios de Dragon Ball Z, Vegeta cumple un papel antagónico, poco después decide rebelarse ante el Imperio de Freeza, volviéndose un aliado clave para los Guerreros Z. Con el paso del tiempo llegaría a cambiar su manera de ser, optando por permanecer y vivir en la Tierra para luchar a su lado contra las inminentes adversidades que superar. Junto con Piccolo, él es de los antiguos enemigos de Goku que ha evolucionando al pasar de ser un villano y antihéroe, a finalmente un héroe a lo largo del transcurso de la historia, convirtiéndose así en el deuteragonista de la serie.",
       "Ki": "54.000.000"
     },
     "Caracteristicas": {
-      "Fuerza": 28,
-      "Salud": 69,
-      "Velocidad": 55,
-      "Agilidad": 56,
-      "Resistencia": 6,
-      "Energia": 8
+      "Fuerza": 34,
+      "Salud": 68,
+      "Velocidad": 80,
+      "Agilidad": 6,
+      "Resistencia": 85,
+      "Energia": 16
     }
   },
   {
@@ -38,16 +38,16 @@
       "Nombre": "Piccolo",
       "Raza": "Namekian",
       "Genero": "Masculino",
-      "Descripcion": "Es un namekiano que surgi\u00F3 tras ser creado en los \u00FAltimos momentos de vida de su padre, siendo su actual reencarnaci\u00F3n. Aunque en un principio fue el archienemigo de Son Goku, con el paso del tiempo fue haci\u00E9ndose menos malvado hasta finalmente convertirse en un ser bondadoso y miembro de los Guerreros Z. A trav\u00E9s del tiempo, tambi\u00E9n comenz\u00F3 a tomarle cari\u00F1o a su disc\u00EDpulo Son Gohan, a quien ve\u00EDa como una especie de \u0022v\u00E1stago\u0022 y formando un lazo de amistad con este.",
+      "Descripcion": "Es un namekiano que surgió tras ser creado en los últimos momentos de vida de su padre, siendo su actual reencarnación. Aunque en un principio fue el archienemigo de Son Goku, con el paso del tiempo fue haciéndose menos malvado hasta finalmente convertirse en un ser bondadoso y miembro de los Guerreros Z. A través del tiempo, también comenzó a tomarle cariño a su discípulo Son Gohan, a quien veía como una especie de \"vástago\" y formando un lazo de amistad con este.",
       "Ki": "2.000.000"
     },
     "Caracteristicas": {
-      "Fuerza": 44,
-      "Salud": 84,
-      "Velocidad": 86,
-      "Agilidad": 79,
-      "Resistencia": 45,
-      "Energia": 20
+      "Fuerza": 68,
+      "Salud": 67,
+      "Velocidad": 19,
+      "Agilidad": 14,
+      "Resistencia": 78,
+      "Energia": 28
     }
   },
   {
@@ -55,16 +55,16 @@
       "Nombre": "Bulma",
       "Raza": "Human",
       "Genero": "Femenino",
-      "Descripcion": "Bulma es la protagonista femenina de la serie manga Dragon Ball y sus adaptaciones al anime Dragon Ball, Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es hija del Dr. Brief y su esposa Panchy, hermana menor de Tights y una gran amiga de Son Goku con quien inicia la b\u00FAsqueda de las Esferas del Drag\u00F3n. En Dragon Ball Z tuvo a Trunks, primog\u00E9nito de quien ser\u00EDa su esposo Vegeta, a su hija Bra[3] y su hijo adulto del tiempo alterno Trunks del Futuro Alternativo.",
+      "Descripcion": "Bulma es la protagonista femenina de la serie manga Dragon Ball y sus adaptaciones al anime Dragon Ball, Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es hija del Dr. Brief y su esposa Panchy, hermana menor de Tights y una gran amiga de Son Goku con quien inicia la búsqueda de las Esferas del Dragón. En Dragon Ball Z tuvo a Trunks, primogénito de quien sería su esposo Vegeta, a su hija Bra[3] y su hijo adulto del tiempo alterno Trunks del Futuro Alternativo.",
       "Ki": "0"
     },
     "Caracteristicas": {
-      "Fuerza": 60,
-      "Salud": 54,
-      "Velocidad": 93,
-      "Agilidad": 73,
-      "Resistencia": 20,
-      "Energia": 36
+      "Fuerza": 58,
+      "Salud": 89,
+      "Velocidad": 49,
+      "Agilidad": 5,
+      "Resistencia": 21,
+      "Energia": 78
     }
   },
   {
@@ -76,12 +76,12 @@
       "Ki": "530.000"
     },
     "Caracteristicas": {
-      "Fuerza": 71,
-      "Salud": 7,
-      "Velocidad": 9,
-      "Agilidad": 89,
-      "Resistencia": 76,
-      "Energia": 27
+      "Fuerza": 78,
+      "Salud": 55,
+      "Velocidad": 77,
+      "Agilidad": 9,
+      "Resistencia": 89,
+      "Energia": 1
     }
   },
   {
@@ -93,12 +93,12 @@
       "Ki": "20.000"
     },
     "Caracteristicas": {
-      "Fuerza": 49,
-      "Salud": 78,
-      "Velocidad": 75,
-      "Agilidad": 7,
-      "Resistencia": 17,
-      "Energia": 8
+      "Fuerza": 81,
+      "Salud": 36,
+      "Velocidad": 42,
+      "Agilidad": 85,
+      "Resistencia": 78,
+      "Energia": 83
     }
   },
   {
@@ -110,12 +110,12 @@
       "Ki": "18.000"
     },
     "Caracteristicas": {
-      "Fuerza": 74,
-      "Salud": 24,
-      "Velocidad": 15,
-      "Agilidad": 80,
-      "Resistencia": 87,
-      "Energia": 17
+      "Fuerza": 63,
+      "Salud": 68,
+      "Velocidad": 67,
+      "Agilidad": 64,
+      "Resistencia": 46,
+      "Energia": 81
     }
   },
   {
@@ -123,16 +123,16 @@
       "Nombre": "Ginyu",
       "Raza": "Frieza Race",
       "Genero": "Masculino",
-      "Descripcion": "Ginyu es el l\u00EDder del la \u00E9lite de mercenarios de mayor prestigio del Ej\u00E9rcito de Freeza, la cual lleva el nombre de Fuerzas Especiales Ginew en su honor[9].",
+      "Descripcion": "Ginyu es el líder del la élite de mercenarios de mayor prestigio del Ejército de Freeza, la cual lleva el nombre de Fuerzas Especiales Ginew en su honor[9].",
       "Ki": "9.000"
     },
     "Caracteristicas": {
-      "Fuerza": 44,
-      "Salud": 85,
-      "Velocidad": 81,
-      "Agilidad": 91,
-      "Resistencia": 80,
-      "Energia": 36
+      "Fuerza": 74,
+      "Salud": 76,
+      "Velocidad": 67,
+      "Agilidad": 34,
+      "Resistencia": 63,
+      "Energia": 90
     }
   },
   {
@@ -140,16 +140,16 @@
       "Nombre": "Celula",
       "Raza": "Android",
       "Genero": "Masculino",
-      "Descripcion": "Cell conocido como C\u00E9lula en Espa\u00F1a, es un bioandroide creado por la computadora del Dr. Gero, quien vino del futuro de la l\u00EDnea 3 con la intenci\u00F3n de vengarse de Goku por haber acabado con el Ej\u00E9rcito del List\u00F3n Rojo, y con ello el sue\u00F1o de todo villano: dominar el mundo. Es el antagonista principal del Arco de los Androides y Cell.",
+      "Descripcion": "Cell conocido como Célula en España, es un bioandroide creado por la computadora del Dr. Gero, quien vino del futuro de la línea 3 con la intención de vengarse de Goku por haber acabado con el Ejército del Listón Rojo, y con ello el sueño de todo villano: dominar el mundo. Es el antagonista principal del Arco de los Androides y Cell.",
       "Ki": "250.000.000"
     },
     "Caracteristicas": {
-      "Fuerza": 57,
-      "Salud": 53,
-      "Velocidad": 12,
-      "Agilidad": 38,
-      "Resistencia": 19,
-      "Energia": 84
+      "Fuerza": 30,
+      "Salud": 56,
+      "Velocidad": 96,
+      "Agilidad": 93,
+      "Resistencia": 21,
+      "Energia": 37
     }
   },
   {
@@ -157,16 +157,186 @@
       "Nombre": "Gohan",
       "Raza": "Saiyan",
       "Genero": "Masculino",
-      "Descripcion": "Son Gohanda en su tiempo en Espa\u00F1a, o simplemente Gohan en Hispanoam\u00E9rica, es uno de los personajes principales de los arcos argumentales de Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es un mestizo entre saiyano y humano terr\u00EDcola. Es el primer hijo de Son Goku y Chi-Chi, hermano mayor de Son Goten, esposo de Videl y padre de Pan.",
+      "Descripcion": "Son Gohanda en su tiempo en España, o simplemente Gohan en Hispanoamérica, es uno de los personajes principales de los arcos argumentales de Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es un mestizo entre saiyano y humano terrícola. Es el primer hijo de Son Goku y Chi-Chi, hermano mayor de Son Goten, esposo de Videl y padre de Pan.",
       "Ki": "45.000.000"
     },
     "Caracteristicas": {
-      "Fuerza": 24,
-      "Salud": 74,
+      "Fuerza": 94,
+      "Salud": 27,
+      "Velocidad": 28,
+      "Agilidad": 4,
+      "Resistencia": 18,
+      "Energia": 43
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Babidi",
+      "Raza": "Majin",
+      "Genero": "Masculino",
+      "Descripcion": "Conocido también como Bóbidi o Bábidi, es un poderoso hechicero madoshi, \"hijo\" del gran mago Bibbidi, fundador de la familia Majin. La \"M\" que llevan ambos en el cinturón de sus atuendos al igual que la frente de aquellos que han sido poseídos para formar parte de la familia Majin.",
+      "Ki": "0"
+    },
+    "Caracteristicas": {
+      "Fuerza": 68,
+      "Salud": 12,
+      "Velocidad": 77,
+      "Agilidad": 19,
+      "Resistencia": 82,
+      "Energia": 96
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Majin Buu",
+      "Raza": "Majin",
+      "Genero": "Masculino",
+      "Descripcion": "También conocido como Boo original, es la forma original y pura de Majin-Boo, y la última forma de Boo que aparece en Dragon Ball Z.",
+      "Ki": "8 Billion"
+    },
+    "Caracteristicas": {
+      "Fuerza": 1,
+      "Salud": 82,
+      "Velocidad": 27,
+      "Agilidad": 45,
+      "Resistencia": 50,
+      "Energia": 1
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Bills",
+      "Raza": "God",
+      "Genero": "Masculino",
+      "Descripcion": "Dios de la Destrucción Beerus, conocido también como Beers, o Bills en Hispanoamérica e inicialmente en España[1], es un personaje que fue introducido en la película Dragon Ball Z: La batalla de los dioses, donde es el antagonista principal de la película, y que aparece en el manga y anime de Dragon Ball Super como un personaje principal. Ocupa el puesto de Dios de la Destrucción de todo el Universo 7 siendo el lugar donde se desarrolla la historia de Dragon Ball.",
+      "Ki": "102 Billion"
+    },
+    "Caracteristicas": {
+      "Fuerza": 99,
+      "Salud": 48,
+      "Velocidad": 84,
+      "Agilidad": 3,
+      "Resistencia": 70,
+      "Energia": 84
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Whis",
+      "Raza": "Angel",
+      "Genero": "Masculino",
+      "Descripcion": "Whis es uno de los hijos del Gran Sacerdote, hermano menor de Vados, Korn y Kus. Es el ángel guía encargado de asistir y servir como maestro al Dios de la Destrucción del Universo 7, Beerus.",
+      "Ki": "15 septillion"
+    },
+    "Caracteristicas": {
+      "Fuerza": 44,
+      "Salud": 29,
       "Velocidad": 14,
-      "Agilidad": 44,
-      "Resistencia": 4,
-      "Energia": 8
+      "Agilidad": 77,
+      "Resistencia": 41,
+      "Energia": 9
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Zeno",
+      "Raza": "Unknown",
+      "Genero": "Masculino",
+      "Descripcion": "Zeno es el ser supremo del multiverso y tiene un poder abrumador .El Rey de Todo, también conocido como Zen Oo (Zeno Sama en España y Zen Oo Sama en Hispanoamerica) y apodado por Son Goku como Todito (全ぜんちゃん, Zen-chan), es el gobernante y dios absoluto de todos los universos y el máximo soberano de todo lo existente en Dragon Ball.",
+      "Ki": "500 Septillion"
+    },
+    "Caracteristicas": {
+      "Fuerza": 19,
+      "Salud": 99,
+      "Velocidad": 10,
+      "Agilidad": 13,
+      "Resistencia": 20,
+      "Energia": 26
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Kibito-Shin",
+      "Raza": "God",
+      "Genero": "Masculino",
+      "Descripcion": "es la fusión entre Shin y Kibito. Ellos fueron unidos permanentemente mediante el uso de los míticos pendientes Pothala. Está actualmente separado gracias a un deseo concedido por las Esferas del Dragón namekianas.",
+      "Ki": "3.2 Billion"
+    },
+    "Caracteristicas": {
+      "Fuerza": 16,
+      "Salud": 40,
+      "Velocidad": 53,
+      "Agilidad": 76,
+      "Resistencia": 64,
+      "Energia": 76
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Jiren",
+      "Raza": "Jiren Race",
+      "Genero": "Masculino",
+      "Descripcion": "Jiren es un poderoso luchador del Universo 11 y uno de los oponentes más formidables en el torneo.",
+      "Ki": "121 Quintillion"
+    },
+    "Caracteristicas": {
+      "Fuerza": 43,
+      "Salud": 81,
+      "Velocidad": 27,
+      "Agilidad": 70,
+      "Resistencia": 11,
+      "Energia": 62
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Toppo",
+      "Raza": "God",
+      "Genero": "Masculino",
+      "Descripcion": "Toppo es el líder de las Tropas del Orgullo, guerreros de la justicia del Universo 11 que actúan como protectores de la paz y superhéroes del bien. Él ha sido entrenado por el ángel guía Marcarita, convirtiéndose así en un candidato como futuro Dios de la Destrucción en su universo.",
+      "Ki": "99 Quadrillion"
+    },
+    "Caracteristicas": {
+      "Fuerza": 42,
+      "Salud": 22,
+      "Velocidad": 16,
+      "Agilidad": 24,
+      "Resistencia": 94,
+      "Energia": 65
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Dyspo",
+      "Raza": "God",
+      "Genero": "Masculino",
+      "Descripcion": "Dyspo es uno de los miembros del Equipo Universo 11 como uno de los soldados más poderosos de las Tropas del Orgullo junto con Jiren y su líder Toppo.",
+      "Ki": "50 Trillion"
+    },
+    "Caracteristicas": {
+      "Fuerza": 31,
+      "Salud": 1,
+      "Velocidad": 49,
+      "Agilidad": 92,
+      "Resistencia": 10,
+      "Energia": 41
+    }
+  },
+  {
+    "Datos": {
+      "Nombre": "Marcarita ",
+      "Raza": "Angel",
+      "Genero": "Femenino",
+      "Descripcion": "Marcarita es el ángel guía del Universo 11, sirviente y maestra de artes marciales del Dios de la Destrucción Vermoud. Es un personaje de la Arco de la Supervivencia Universal de Dragon Ball Super.",
+      "Ki": "10 septillion"
+    },
+    "Caracteristicas": {
+      "Fuerza": 19,
+      "Salud": 96,
+      "Velocidad": 17,
+      "Agilidad": 49,
+      "Resistencia": 82,
+      "Energia": 4
     }
   }
 ]

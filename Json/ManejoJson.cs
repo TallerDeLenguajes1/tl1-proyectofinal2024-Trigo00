@@ -5,19 +5,7 @@ namespace ManejoJson
 {
     public class PersonajesJson
     {
-        public static void GuardarPersonajes(List<Personaje> misPersonajes, string nombreArchivo)
-        {
-            // Serializo la lista de personajes a JSON
-            string jsonString = JsonSerializer.Serialize(misPersonajes, new JsonSerializerOptions { WriteIndented = true });
-            File.WriteAllText(nombreArchivo, jsonString);
-        }
-        //No uso esta funcion pero la tengo porque debo hacerla
-        public static List<Personaje> LeerPersonajes(string nombreArchivo)
-        {
-            string dev = File.ReadAllText(nombreArchivo);
-            return JsonSerializer.Deserialize<List<Personaje>>(dev);
-        }
-        //Tampoco uso esta funcion
+
         public static bool Existe(string nombreArchivo)
         {
             if(File.Exists(nombreArchivo))
@@ -27,5 +15,35 @@ namespace ManejoJson
                 return false;
             }
         }
+        public static void GuardarPersonajes(List<Personaje> misPersonajes, string nombreArchivo)
+        {
+            // Crear el directorio si no existe
+            string directorio = Path.GetDirectoryName(nombreArchivo);
+            if (!Directory.Exists(directorio))
+            {
+                Directory.CreateDirectory(directorio);
+            }
+
+            // Configuración para formatear el JSON
+            var opciones = new JsonSerializerOptions
+            {
+                Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping, //Para evitar los acentos
+                WriteIndented = true
+            };
+
+            // Convertir la lista de personajes a JSON con formato
+            string jsonString = JsonSerializer.Serialize(misPersonajes, opciones);
+
+            // Guardar el JSON en el archivo
+            File.WriteAllText(nombreArchivo, jsonString);
+        }
+
+        //No uso esta funcion pero la tengo porque debo hacerla
+        public static List<Personaje> LeerPersonajes(string nombreArchivo)
+        {
+            string dev = File.ReadAllText(nombreArchivo);
+            return JsonSerializer.Deserialize<List<Personaje>>(dev);
+        }
+        //Tampoco uso esta funcion
     }
 }
