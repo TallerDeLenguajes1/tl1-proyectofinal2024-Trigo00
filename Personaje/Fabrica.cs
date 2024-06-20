@@ -1,7 +1,5 @@
 using DatosApi;
 using Personajes;
-using System;
-using System.Collections.Generic;
 
 namespace FabricaPersonajes
 {

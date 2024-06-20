@@ -1,6 +1,6 @@
 namespace Personajes
 {
-    
+
     public class Personaje
     {
         private Datos datos;
@@ -26,9 +26,9 @@ namespace Personajes
 
 
         public string Nombre { get => nombre; set => nombre = value; }
-        public string Raza { get => raza; set => raza = value;}
-        public string Genero { get => genero; set => genero = value;}
-        public string Descripcion { get => descripcion; set => descripcion = value;}
+        public string Raza { get => raza; set => raza = value; }
+        public string Genero { get => genero; set => genero = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Ki { get => ki; set => ki = value; }
     }
 
@@ -59,5 +59,5 @@ namespace Personajes
         public int Resistencia { get => resistencia; set => resistencia = value; }
         public int Energia { get => energia; set => energia = value; }
     }
-
+    
 }
