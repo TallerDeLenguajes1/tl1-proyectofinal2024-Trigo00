@@ -28,7 +28,7 @@ namespace DatosApi
             try
             {
                 HttpClient client = new HttpClient();
-                var url = "https://dragonball-api.com/api/characters";
+                var url = "https://dragonball-api.com/api/characters?limit=58";
                 HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
@@ -52,36 +52,5 @@ namespace DatosApi
 
             return listaPersonajes;
         }
-
-        public static async Task<List<PersonajeApi>> traerInformacionApi2(List<PersonajeApi> listaPersonajes2)
-        {
-            try
-            {
-                HttpClient client = new HttpClient();
-                var url = "https://dragonball-api.com/api/characters?page=4&limit=10";
-                HttpResponseMessage response = await client.GetAsync(url);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-
-                // Deserializar la respuesta JSON en ApiResponse
-                var apiResponse = JsonSerializer.Deserialize<ApiResponse>(responseBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-
-                if (apiResponse != null && apiResponse.Items != null)
-                {
-                    foreach (var personaje in apiResponse.Items)
-                    {
-                        listaPersonajes2.Add(personaje);
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Ocurrió un error: " + ex.Message);
-            }
-
-            return listaPersonajes2;
-        }
     }
-
 }
