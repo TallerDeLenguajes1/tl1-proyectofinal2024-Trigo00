@@ -17,6 +17,3 @@ List<Personaje> personajes = JsonSerializer.Deserialize<List<Personaje>>(jsonDat
 Personaje personajeSeleccionado = Seleccion.SeleccionUsuario.SeleccionPersonaje(personajes);
 
 Seleccion.SeleccionUsuario.MostrarMenuContrincantes(personajes, personajeSeleccionado);
-
-
-

@@ -69,6 +69,7 @@ namespace Seleccion
                         Console.CursorVisible = true;
                         Console.WriteLine("Presiona cualquier tecla para continuar...");
                         Console.ReadKey(true);
+                        Console.CursorVisible = false;
                         return seleccionado;
                 }
             }
@@ -81,13 +82,16 @@ namespace Seleccion
 
             int seleccionIndex = 0;
             string[] opciones = {
-                "1. Seleccionar contrincantes aleatoriamente",
-                "2. Seleccionar contrincantes manualmente"
-            };
+        "Seleccionar contrincantes aleatoriamente",
+        "Seleccionar contrincantes manualmente"
+    };
+
+            // Ocultar el cursor
+            Console.CursorVisible = false;
 
             while (true)
             {
-                Console.SetCursorPosition(0, 2); // Posicionar el cursor después del título
+                Console.Clear();
 
                 // Mostrar las opciones
                 for (int i = 0; i < opciones.Length; i++)
@@ -101,6 +105,9 @@ namespace Seleccion
                     Console.ResetColor();
                 }
 
+                // Evitar que se muestre un espacio en blanco al final
+                Console.WriteLine();
+
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
                 switch (keyInfo.Key)
                 {
@@ -112,6 +119,8 @@ namespace Seleccion
                         break;
                     case ConsoleKey.Enter:
                         Console.Clear();
+                        // Mostrar el cursor nuevamente antes de salir del método
+                        Console.CursorVisible = true;
                         switch (seleccionIndex)
                         {
                             case 0:
@@ -127,6 +136,7 @@ namespace Seleccion
                 }
             }
         }
+
 
         public static List<Personaje> SeleccionarContrincantesAleatoriamente(List<Personaje> listaPersonajes, Personaje personajePrincipal)
         {
@@ -155,6 +165,7 @@ namespace Seleccion
 
             while (seleccionadosCount < 15)
             {
+                Console.CursorVisible = false;
                 keyInfo = Console.ReadKey(true);
                 switch (keyInfo.Key)
                 {
