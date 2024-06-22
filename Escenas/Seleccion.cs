@@ -75,16 +75,16 @@ namespace Seleccion
             }
         }
 
-        public static void MostrarMenuContrincantes(List<Personaje> listaPersonajes, Personaje personajePrincipal)
+        public static List<Personaje> MostrarMenuContrincantes(List<Personaje> listaPersonajes, Personaje personajePrincipal)
         {
             Console.Clear();
             Console.WriteLine("Selecciona cómo quieres elegir los contrincantes:");
 
             int seleccionIndex = 0;
             string[] opciones = {
-        "Seleccionar contrincantes aleatoriamente",
-        "Seleccionar contrincantes manualmente"
-    };
+                "Seleccionar contrincantes aleatoriamente",
+                "Seleccionar contrincantes manualmente"
+            };
 
             // Ocultar el cursor
             Console.CursorVisible = false;
@@ -125,14 +125,14 @@ namespace Seleccion
                         {
                             case 0:
                                 List<Personaje> contrincantesAleatorios = SeleccionarContrincantesAleatoriamente(listaPersonajes, personajePrincipal);
-                                MostrarContrincantes(contrincantesAleatorios);
-                                break;
+                                Console.Clear();
+                                return contrincantesAleatorios;
                             case 1:
                                 List<Personaje> contrincantesSeleccionados = SeleccionarContrincantesManualmente(listaPersonajes, personajePrincipal);
-                                MostrarContrincantes(contrincantesSeleccionados);
-                                break;
+                                Console.Clear();
+                                return contrincantesSeleccionados;
                         }
-                        return;
+                        return null;
                 }
             }
         }
