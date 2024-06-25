@@ -34,7 +34,7 @@ namespace Cruces
 
             // Muestro al ganador final del torneo
             List<Tuple<Personaje, Personaje>> cruceFinal = GenerarCruces(ganadoresSemifinales);
-            List<Personaje> ganadorFinales = SimularPeleas(cruceFinal, personajePrincipal);
+            List<Personaje> ganadorFinales = SimularPeleaFinal(cruceFinal, personajePrincipal);
             Console.WriteLine($"\n¡El ganador del torneo es: {ganadorFinales[0].Datos.Nombre}!");
 
         }
@@ -119,9 +119,72 @@ namespace Cruces
                     }
 
                 }
+                subirEstadisticasGanador(ganador); //Subo las estadisticas del pj que gana un combate en el torneo
                 ganadores.Add(ganador);
             }
             return ganadores;
+        }
+
+        private static List<Personaje> SimularPeleaFinal(List<Tuple<Personaje, Personaje>> cruces, Personaje personajeUsuario)
+        {
+            Random rng = new Random();
+            List<Personaje> ganadores = new List<Personaje>();
+
+            foreach (var pelea in cruces)
+            {
+                Personaje ganador;
+
+                if (pelea.Item1 == personajeUsuario)
+                {
+                    // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
+                    ganador = Pelea.PeleaUsuario.peleaPersonaje(pelea.Item1, pelea.Item2);
+                    if (ganador != personajeUsuario)
+                    {
+                        Console.WriteLine("¡Perdiste!");
+                        Console.WriteLine("Vuelva a intentarlo en la siguiente oportunidad");
+                    }
+                    else
+                    {
+                        Console.WriteLine("¡Bien hecho!, has ganado el Torneo de Artes Marciales.");
+                    }
+                }
+                else
+                {
+                    if (pelea.Item2 == personajeUsuario)
+                    {
+                        // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
+                        ganador = Pelea.PeleaUsuario.peleaPersonaje(pelea.Item2, pelea.Item1);
+                        if (ganador != personajeUsuario)
+                        {
+                            Console.WriteLine("¡Perdiste!");
+                            Console.WriteLine("Vuelva a intentarlo en la siguiente oportunidad");
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Bien hecho!, has ganado el Torneo de Artes Marciales.");
+
+                        }
+                    }
+                    else
+                    {
+                        // Si no es una pelea del usuario, elige un ganador aleatorio
+                        ganador = rng.Next(2) == 0 ? pelea.Item1 : pelea.Item2;
+                    }
+
+                }
+                ganadores.Add(ganador);
+            }
+            return ganadores;
+        }
+
+        public static void subirEstadisticasGanador(Personaje ganador){
+
+            ganador.Caracteristicas.Agilidad += 2;
+            ganador.Caracteristicas.Energia += 2;
+            ganador.Caracteristicas.Fuerza += 2;
+            ganador.Caracteristicas.Resistencia += 2;
+            ganador.Caracteristicas.Velocidad += 2;
+
         }
     }
 }

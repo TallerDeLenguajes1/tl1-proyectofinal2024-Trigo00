@@ -10,9 +10,9 @@ namespace Pelea
 
         public static int devolverDanio(Personaje personajeUsuario)
         {
-            double Ataque = (personajeUsuario.Caracteristicas.Fuerza) * (personajeUsuario.Caracteristicas.Velocidad) * (personajeUsuario.Caracteristicas.Energia);
+            double Ataque = (personajeUsuario.Caracteristicas.Fuerza * 1.5) * (personajeUsuario.Caracteristicas.Velocidad * 1.5) * (personajeUsuario.Caracteristicas.Energia * 1.5);
             double Efectividad = rand.Next(50, 101);
-            double Defensa = (personajeUsuario.Caracteristicas.Resistencia) * (personajeUsuario.Caracteristicas.Agilidad) * (personajeUsuario.Caracteristicas.Energia);
+            double Defensa = (personajeUsuario.Caracteristicas.Resistencia * 1.5) * (personajeUsuario.Caracteristicas.Agilidad * 1.5) * (personajeUsuario.Caracteristicas.Energia * 1.5);
             double CtteAjuste = 1000000;
             double DanioProvocado = ((Ataque * Efectividad) - Defensa) / CtteAjuste;
 
@@ -77,7 +77,7 @@ namespace Pelea
 
             if (respuesta)
             {
-                danio *= 5;
+                danio *= 2;
                 Console.WriteLine("Obtienes un buffo, aprovechalo!");
                 defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
                 if (defensor.Caracteristicas.Salud < 0)
