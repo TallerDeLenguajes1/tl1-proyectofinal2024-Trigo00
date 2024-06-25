@@ -17,7 +17,7 @@ namespace ManejoJson
         }
         public static void GuardarPersonajes(List<Personaje> misPersonajes, string nombreArchivo)
         {
-            // Crear el directorio si no existe
+            // Creo el directorio si no existe
             string directorio = Path.GetDirectoryName(nombreArchivo);
             if (!Directory.Exists(directorio))
             {
@@ -31,10 +31,10 @@ namespace ManejoJson
                 WriteIndented = true
             };
 
-            // Convertir la lista de personajes a JSON con formato
+            // Convierto la lista de personajes a JSON
             string jsonString = JsonSerializer.Serialize(misPersonajes, opciones);
 
-            // Guardar el JSON en el archivo
+            // Guardo el JSON en el archivo
             File.WriteAllText(nombreArchivo, jsonString);
         }
 
@@ -44,6 +44,5 @@ namespace ManejoJson
             string dev = File.ReadAllText(nombreArchivo);
             return JsonSerializer.Deserialize<List<Personaje>>(dev);
         }
-        //Tampoco uso esta funcion
     }
 }

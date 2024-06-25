@@ -1,4 +1,5 @@
 using Personajes;
+using Historial;
 
 namespace Cruces
 {
@@ -6,42 +7,39 @@ namespace Cruces
     {
         public static void mostrarCruces(List<Personaje> lista)
         {
+            Personaje personajePrincipal = lista[0];
             Random rng = new Random();
 
-            // Mezclar la lista de participantes aleatoriamente
-            Shuffle(lista, rng);
+            // Mezclo la lista de participantes aleatoriamente
+            Mezclar(lista, rng);
 
-            // Mostrar los cruces de octavos de final
+            // Muestro los cruces de octavos de final
             Console.WriteLine("\n== Torneo de Artes Marciales ==");
             MostrarCrucesDeRonda("Octavos de Final", lista);
 
-            // Simular y mostrar los cruces de cuartos de final
+            // Simulo y muestro los cruces de cuartos de final
             List<Tuple<Personaje, Personaje>> crucesOctavos = GenerarCruces(lista);
-            List<Personaje> ganadoresOctavos = SimularPeleas(crucesOctavos);
+            List<Personaje> ganadoresOctavos = SimularPeleas(crucesOctavos, personajePrincipal);
             MostrarCrucesDeRonda("Cuartos de Final", ganadoresOctavos);
 
-            // Simular y mostrar los cruces de semifinales
+            // Simulo y muestro los cruces de semifinales
             List<Tuple<Personaje, Personaje>> crucesCuartos = GenerarCruces(ganadoresOctavos);
-            List<Personaje> ganadoresCuartos = SimularPeleas(crucesCuartos);
+            List<Personaje> ganadoresCuartos = SimularPeleas(crucesCuartos, personajePrincipal);
             MostrarCrucesDeRonda("Semifinales", ganadoresCuartos);
 
-            // Simular y mostrar la final
+            // Simulo y muestro la final
             List<Tuple<Personaje, Personaje>> crucesSemifinales = GenerarCruces(ganadoresCuartos);
-            List<Personaje> ganadoresSemifinales = SimularPeleas(crucesSemifinales);
+            List<Personaje> ganadoresSemifinales = SimularPeleas(crucesSemifinales, personajePrincipal);
             MostrarCrucesDeRonda("Final", ganadoresSemifinales);
 
-            // Mostrar al ganador final del torneo
-            Personaje ganadorFinal = ObtenerGanadorFinal(ganadoresSemifinales);
-            Console.WriteLine($"\n¡El ganador del torneo es: {ganadorFinal.Datos.Nombre}!");
+            // Muestro al ganador final del torneo
+            List<Tuple<Personaje, Personaje>> cruceFinal = GenerarCruces(ganadoresSemifinales);
+            List<Personaje> ganadorFinales = SimularPeleas(cruceFinal, personajePrincipal);
+            Console.WriteLine($"\n¡El ganador del torneo es: {ganadorFinales[0].Datos.Nombre}!");
+
         }
 
-        public static Personaje ObtenerGanadorFinal(List<Personaje> ganadoresSemifinales)
-        {
-            // El ganador final es el último elemento de la lista de ganadores de semifinales
-            return ganadoresSemifinales[ganadoresSemifinales.Count - 1];
-        }
-
-        private static void Shuffle(List<Personaje> lista, Random rng)
+        private static void Mezclar(List<Personaje> lista, Random rng)
         {
             int n = lista.Count;
             for (int i = 0; i < n; i++)
@@ -75,18 +73,54 @@ namespace Cruces
             return cruces;
         }
 
-        private static List<Personaje> SimularPeleas(List<Tuple<Personaje, Personaje>> cruces)
+        private static List<Personaje> SimularPeleas(List<Tuple<Personaje, Personaje>> cruces, Personaje personajeUsuario)
         {
             Random rng = new Random();
             List<Personaje> ganadores = new List<Personaje>();
 
             foreach (var pelea in cruces)
             {
-                // Simular un ganador aleatorio para cada pelea
-                Personaje ganador = rng.Next(2) == 0 ? pelea.Item1 : pelea.Item2;
+                Personaje ganador;
+
+                if (pelea.Item1 == personajeUsuario)
+                {
+                    // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
+                    ganador = Pelea.PeleaUsuario.peleaPersonaje(pelea.Item1, pelea.Item2);
+                    if (ganador != personajeUsuario)
+                    {
+                        Console.WriteLine("¡Perdiste!");
+                        Console.WriteLine("Vuelva a intentarlo en la siguiente oportunidad");
+                    }
+                    else
+                    {
+                        Console.WriteLine("¡Bien hecho!, avanzas a la siguiente ronda.");
+                    }
+                }
+                else
+                {
+                    if (pelea.Item2 == personajeUsuario)
+                    {
+                        // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
+                        ganador = Pelea.PeleaUsuario.peleaPersonaje(pelea.Item2, pelea.Item1);
+                        if (ganador != personajeUsuario)
+                        {
+                            Console.WriteLine("¡Perdiste!");
+                            Console.WriteLine("Vuelva a intentarlo en la siguiente oportunidad");
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Bien hecho!, avanzas a la siguiente ronda.");
+                        }
+                    }
+                    else
+                    {
+                        // Si no es una pelea del usuario, elige un ganador aleatorio
+                        ganador = rng.Next(2) == 0 ? pelea.Item1 : pelea.Item2;
+                    }
+
+                }
                 ganadores.Add(ganador);
             }
-
             return ganadores;
         }
     }

@@ -1,12 +1,8 @@
-﻿using CuantoSabes;
-using ArmarJsonPjsConApi;
+﻿using ArmarJsonPjsConApi;
 using Personajes;
 
 ///////Cargar datos desde Api//////////
 await CargadorDatos.CargarDatosPersonajesAsync();
-
-//////Probando el preguntas y respuestas//////////
-//MostrarResultados.MostrarResultadosPreguntas();
 
 //Obtengo la lista de peleadores del torneo
 List<Personaje> listaPersonajesTorneo = LuchadoresTorneo.Torneo.ObtenerListaPeleadores();

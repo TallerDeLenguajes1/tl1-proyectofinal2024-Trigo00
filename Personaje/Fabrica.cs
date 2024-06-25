@@ -30,13 +30,13 @@ namespace FabricaPersonajes
                 nuevoPersonaje.Datos.Descripcion = personaje.Description;
 
                 //Caracteristicas
-                nuevoPersonaje.Caracteristicas.Fuerza = random.Next(1, 100);
-                nuevoPersonaje.Caracteristicas.Salud = random.Next(1, 100);
-                nuevoPersonaje.Caracteristicas.Velocidad = random.Next(1, 100);
-                nuevoPersonaje.Caracteristicas.Agilidad = random.Next(1, 100);
-                nuevoPersonaje.Caracteristicas.Resistencia = random.Next(1, 100);
-                nuevoPersonaje.Caracteristicas.Energia = random.Next(1, 100);
-                nuevoPersonaje.Caracteristicas.Velocidad = random.Next(1, 100);
+                nuevoPersonaje.Caracteristicas.Fuerza = random.Next(20, 71);
+                nuevoPersonaje.Caracteristicas.Salud = 100;
+                nuevoPersonaje.Caracteristicas.Velocidad = random.Next(20, 71);
+                nuevoPersonaje.Caracteristicas.Agilidad = random.Next(20, 71);
+                nuevoPersonaje.Caracteristicas.Resistencia = random.Next(20, 71);
+                nuevoPersonaje.Caracteristicas.Energia = random.Next(20, 71);
+                nuevoPersonaje.Caracteristicas.Velocidad = random.Next(20, 71);
 
                 listaPersonajes.Add(nuevoPersonaje);
 
