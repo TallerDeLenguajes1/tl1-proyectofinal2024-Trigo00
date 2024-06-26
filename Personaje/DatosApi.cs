@@ -23,7 +23,7 @@ namespace DatosApi
 
     public class InfoApi
     {
-        public static async Task<List<PersonajeApi>> traerInformacionApi1(List<PersonajeApi> listaPersonajes)
+        public static async Task<List<PersonajeApi>> traerInformacionApi(List<PersonajeApi> listaPersonajes)
         {
             try
             {

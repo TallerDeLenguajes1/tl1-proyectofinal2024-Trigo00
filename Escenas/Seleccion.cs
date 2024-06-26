@@ -26,6 +26,7 @@ namespace Seleccion
             {
                 Console.SetCursorPosition(0, 0);
                 Console.WriteLine("Seleccione un personaje de la lista:");
+                Console.WriteLine();
 
                 // Muestro los personajes en columnas
                 for (int fila = 0; fila < filas; fila++)

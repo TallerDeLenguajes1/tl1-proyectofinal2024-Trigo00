@@ -1,3 +1,4 @@
+using System.Reflection;
 using DatosApi;
 using FabricaPersonajes;
 using ManejoJson;
@@ -12,7 +13,7 @@ namespace ArmarJsonPjsConApi
             List<PersonajeApi> listaPersonajesApi = new List<PersonajeApi>();
             List<Personaje> listaPersonajes = new List<Personaje>();
 
-            listaPersonajesApi = await InfoApi.traerInformacionApi1(listaPersonajesApi);
+            listaPersonajesApi = await InfoApi.traerInformacionApi(listaPersonajesApi);
             listaPersonajes = Fabrica.cargarDatos(listaPersonajes, listaPersonajesApi);
 
             // Guarda los personajes en un archivo JSON en el directorio "Json"

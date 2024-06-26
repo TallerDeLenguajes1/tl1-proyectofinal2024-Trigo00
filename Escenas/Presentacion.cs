@@ -39,8 +39,9 @@ namespace Presentacion
 
         }
 
-        public static List<string> cargarMensajes()
+        public static void mostrarMensajes()
         {
+            int mensajeNumero = 0;
 
             List<string> mensajes = new List<string>();
 
@@ -50,115 +51,103 @@ namespace Presentacion
             mensajes.Add("Donde habran un total de 16 participantes listos para luchar y poner a prueba sus habilidades");
             mensajes.Add("Estas listo para comenzar?");
 
-            return mensajes;
-
-        }
-
-        public static void mostrarOpciones()
-{
-    string asciiArt = @"
-    __  ___                     ____       _            _             __
-   /  |/  /__  ____  __  __    / __ \_____(_)___  _____(_)___  ____ _/ /
-  / /|_/ / _ \/ __ \/ / / /   / /_/ / ___/ / __ \/ ___/ / __ \/ __ `/ / 
- / /  / /  __/ / / / /_/ /   / ____/ /  / / / / / /__/ / /_/ / /_/ / /  
-/_/  /_/\___/_/ /_/\__,_/   /_/   /_/  /_/_/ /_/\___/_/ .___/\__,_/_/   
-                                                     /_/                 
-";
-
-    string[] opciones = {
-        "Comenzar a Jugar",
-        "Historial de Campeones",
-        "Informacion Personajes",
-        "Salir"
-    };
-
-    int seleccionIndex = 0;
-
-    // Oculto el cursor
-    Console.CursorVisible = false;
-
-    // Calcular posiciones para centrar
-    int windowHeight = Console.WindowHeight;
-    int windowWidth = Console.WindowWidth;
-
-    // Calcular posición vertical para el título
-    int titleVerticalPosition = (windowHeight - asciiArt.Split('\n').Length) / 2;
-
-    // Calcular posición vertical para el menú
-    int menuVerticalPosition = titleVerticalPosition + asciiArt.Split('\n').Length + 2;
-
-    // Dibujar el título centrado
-    Console.Clear();
-    Console.SetCursorPosition((windowWidth - asciiArt.Split('\n')[0].Length) / 2, titleVerticalPosition);
-    Console.WriteLine(asciiArt);
-
-    // Dibujar el menú centrado
-    Console.SetCursorPosition((windowWidth - opciones[0].Length) / 2, menuVerticalPosition);
-
-    void DibujarMenu()
-    {
-        for (int i = 0; i < opciones.Length; i++)
-        {
-            if (i == seleccionIndex)
+            for (int i = 0; i < mensajes.Count; i++)
             {
-                Console.BackgroundColor = ConsoleColor.Gray;
-                Console.ForegroundColor = ConsoleColor.Black;
-            }
-            else
-            {
-                Console.ResetColor();
-            }
-
-            Console.WriteLine(opciones[i]);
-        }
-
-        // Restablecer el color por defecto
-        Console.ResetColor();
-    }
-
-    // Dibujar el menú inicial
-    DibujarMenu();
-
-    while (true)
-    {
-        ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-        switch (keyInfo.Key)
-        {
-            case ConsoleKey.UpArrow:
-                if (seleccionIndex > 0) seleccionIndex--;
-                break;
-            case ConsoleKey.DownArrow:
-                if (seleccionIndex < opciones.Length - 1) seleccionIndex++;
-                break;
-            case ConsoleKey.Enter:
                 Console.Clear();
-                // Muestro el cursor nuevamente antes de salir del método
-                Console.CursorVisible = true;
-                Console.WriteLine($"Seleccionaste: {opciones[seleccionIndex]}");
-                // Aquí puedes agregar la lógica que desees al seleccionar una opción
-                switch (seleccionIndex)
+
+                // Mover el cursor al principio de la consola
+                Console.SetCursorPosition(0, 0);
+
+                // Imprimo el ASCII de Puar
+                mostrarPuar();
+
+                // Imprimir el mensaje al costado
+                Console.SetCursorPosition(40, 0);
+
+                // Obtener el tamaño de la ventana de la consola
+                int windowHeight = Console.WindowHeight;
+
+                // Contar el número de líneas en el texto
+                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+
+                // Calcular el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - textLineCount) / 2;
+
+                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                for (int j = 0; j < paddingLines - 5; j++)
                 {
-                    case 0:
-                        // Lógica para "Comenzar a Jugar"
-                        break;
-                    case 1:
-                        // Lógica para "Historial de Campeones"
-                        break;
-                    case 2:
-                        // Lógica para "Informacion Personajes"
-                        break;
-                    case 3:
-                        // Lógica para "Salir"
-                        return;
+                    Console.WriteLine();
                 }
-                return;
+
+                // Imprimir el texto
+                Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
+
+                // Cambiar el mensaje después de un tiempo
+                int cantidadTextos = mensajes.Count;
+                if (i == cantidadTextos - 1)
+                {
+                    // Interacción con botones Sí y No
+                    int seleccionIndex = 0;
+                    string[] opciones = { "Si", "No" };
+
+                    // Oculto el cursor
+                    Console.CursorVisible = false;
+
+                    // Posicionar el cursor antes de la línea de opciones
+                    int leftMargin = 45;
+                    int topMargin = Console.CursorTop + 2;
+
+                    while (true)
+                    {
+                        Console.SetCursorPosition(0, topMargin - 1);
+                        Console.WriteLine();
+                        Console.SetCursorPosition(0, topMargin);
+
+                        // Muestro las opciones
+                        for (int k = 0; k < opciones.Length; k++)
+                        {
+                            Console.SetCursorPosition(leftMargin + (k * 10), topMargin);
+                            if (k == seleccionIndex)
+                            {
+                                Console.BackgroundColor = ConsoleColor.DarkYellow;
+                                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            }
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            Console.Write($"[{opciones[k]}]");
+                            Console.ResetColor();
+                        }
+
+                        ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                        switch (keyInfo.Key)
+                        {
+                            case ConsoleKey.LeftArrow:
+                                if (seleccionIndex > 0) seleccionIndex--;
+                                break;
+                            case ConsoleKey.RightArrow:
+                                if (seleccionIndex < opciones.Length - 1) seleccionIndex++;
+                                break;
+                            case ConsoleKey.Enter:
+                                Console.Clear();
+                                // Muestro el cursor nuevamente antes de salir del método
+                                Console.CursorVisible = true;
+                                if(opciones[seleccionIndex] == "Si"){
+                                    MenuPrincipal.Menu.MostrarOpciones();
+                                }else{
+                                    Console.WriteLine($"Seleccionaste: {opciones[seleccionIndex]}");
+                                }
+                                return;
+                        }
+                    }
+                }
+                else
+                {
+                    mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
+                    Thread.Sleep(4000); // Esperar 4 segundos antes de cambiar el mensaje
+                }
+            }
         }
 
-        // Actualizar el menú
-        Console.SetCursorPosition((windowWidth - opciones[0].Length) / 2, menuVerticalPosition);
-        DibujarMenu();
-    }
-}
+
 
 
 

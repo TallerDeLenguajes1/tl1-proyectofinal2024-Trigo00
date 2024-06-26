@@ -36,7 +36,6 @@ namespace FabricaPersonajes
                 nuevoPersonaje.Caracteristicas.Agilidad = random.Next(20, 71);
                 nuevoPersonaje.Caracteristicas.Resistencia = random.Next(20, 71);
                 nuevoPersonaje.Caracteristicas.Energia = random.Next(20, 71);
-                nuevoPersonaje.Caracteristicas.Velocidad = random.Next(20, 71);
 
                 listaPersonajes.Add(nuevoPersonaje);
 
