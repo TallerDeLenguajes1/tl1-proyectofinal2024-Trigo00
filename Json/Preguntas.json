@@ -1,0 +1,245 @@
+[
+    {
+        "Pregunta": "Como se llama la madre de Goku?",
+        "Respuestas": [
+            "Gine",
+            "Apple",
+            "Nuts"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Quien mato a Nappa?",
+        "Respuestas": [
+            "Vegeta",
+            "Goku",
+            "Krillin"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Como se llama la reencarnacion buena de Majin Boo?",
+        "Respuestas": [
+            "Uub",
+            "Pan",
+            "Bra"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Quien mato al padre de Goku?",
+        "Respuestas": [
+            "Freezer",
+            "Rey Vegeta",
+            "Bills"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Quien muere para que Gohan se transforme en Ssj 2?",
+        "Respuestas": [
+            "Androide 16",
+            "Krillin",
+            "Piccolo"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "De las esferas del dragon, cual es el numero de la suerte de Goku?",
+        "Respuestas": [
+            "7",
+            "2",
+            "4"
+        ],
+        "RespuestaCorrectaIndex": 2
+    },
+    {
+        "Pregunta": "Como se llama el dragon en el planeta Namekusei?",
+        "Respuestas": [
+            "Shenron",
+            "Porunga",
+            "Omega Porunga"
+        ],
+        "RespuestaCorrectaIndex": 1
+    },
+    {
+        "Pregunta": "Quien derroto al Androide 19?",
+        "Respuestas": [
+            "Trunks",
+            "Goku",
+            "Vegeta"
+        ],
+        "RespuestaCorrectaIndex": 2
+    },
+    {
+        "Pregunta": "Cuantas veces le cortaron la cola a Gohan?",
+        "Respuestas": [
+            "1",
+            "2",
+            "Nunca"
+        ],
+        "RespuestaCorrectaIndex": 2
+    },
+    {
+        "Pregunta": "Cuál es el seudónimo que utiliza Píccoro para registrarse en el torneo de las artes marciales?",
+        "Respuestas": [
+            "Majunia",
+            "Daimakú",
+            "Ninguno"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Quien secuestra a Gohan?",
+        "Respuestas": [
+            "Raditz",
+            "Cell",
+            "Vegeta"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Cuantas veces muere Goku?",
+        "Respuestas": [
+            "1",
+            "2",
+            "3"
+        ],
+        "RespuestaCorrectaIndex": 1
+    },
+    {
+        "Pregunta": "Como se llama la nieta de Goku y Milk?",
+        "Respuestas": [
+            "Asta",
+            "Pan",
+            "Apu"
+        ],
+        "RespuestaCorrectaIndex": 1
+    },
+    {
+        "Pregunta": "Como se llama el maestro ermitanio que vive en una torre?",
+        "Respuestas": [
+            "Maestro Karin",
+            "Kamisama",
+            "Gran Patriarca"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "De quien es la tecnica Kikoho?",
+        "Respuestas": [
+            "Krillin",
+            "Yamcha",
+            "Tenshinhan"
+        ],
+        "RespuestaCorrectaIndex": 2
+    },
+    {
+        "Pregunta": "Cuantos capitulos tiene Dragon Ball Z?",
+        "Respuestas": [
+            "194",
+            "290",
+            "291"
+        ],
+        "RespuestaCorrectaIndex": 2
+    },
+    {
+        "Pregunta": "Cuantas transformaciones tiene Majin Buu, contando su reencarnacion?",
+        "Respuestas": [
+            "7",
+            "5",
+            "9"
+        ],
+        "RespuestaCorrectaIndex": 2
+    },
+    {
+        "Pregunta": "Que es lo que mas teme Goku?",
+        "Respuestas": [
+            "Milk",
+            "Inyecciones",
+            "Broly"
+        ],
+        "RespuestaCorrectaIndex": 1
+    },
+    {
+        "Pregunta": "Cual es la unica tecnica propia de Goku?",
+        "Respuestas": [
+            "Genkidama",
+            "Kamehameha",
+            "Punio de Dragon"
+        ],
+        "RespuestaCorrectaIndex": 2
+    },
+    {
+        "Pregunta": "Quien le dio la espada a Trunks?",
+        "Respuestas": [
+            "Tapion",
+            "Vegeta",
+            "Goten"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Cuantos anios tenia Gohan cuando Piccoro lo llevo a entrenar?",
+        "Respuestas": [
+            "4",
+            "5",
+            "6"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Cual de todos los villanos no mato a Krillin?",
+        "Respuestas": [
+            "Freezer",
+            "Cell",
+            "Majin Buu"
+        ],
+        "RespuestaCorrectaIndex": 1
+    },
+    {
+        "Pregunta": "Cuanto tiempo tardo el Maestro Roshi en perfeccionar el Kamehameha?",
+        "Respuestas": [
+            "50 anios",
+            "3 meses",
+            "30 anios"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Quien derrota a Cell?",
+        "Respuestas": [
+            "Goku",
+            "Gohan",
+            "Vegeta"
+        ],
+        "RespuestaCorrectaIndex": 1
+    },
+    {
+        "Pregunta": "Cual de los siguientes personajes es el amigo de Buu?",
+        "Respuestas": [
+            "Mr Satan",
+            "Babidi",
+            "Goten"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Que usan los guerreros z para recuperar su fuerza?",
+        "Respuestas": [
+            "Semilla del ermitanio",
+            "Medicina",
+            "Agua"
+        ],
+        "RespuestaCorrectaIndex": 0
+    },
+    {
+        "Pregunta": "Quien destruye el planeta Vegeta?",
+        "Respuestas": [
+            "Turles",
+            "Freezer",
+            "Bills"
+        ],
+        "RespuestaCorrectaIndex": 1
+    }
+]
