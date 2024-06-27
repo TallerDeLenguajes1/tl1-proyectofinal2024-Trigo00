@@ -25,6 +25,7 @@ namespace Seleccion
             while (true)
             {
                 Console.SetCursorPosition(0, 0);
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("Seleccione un personaje de la lista:");
                 Console.WriteLine();
 
@@ -33,14 +34,15 @@ namespace Seleccion
                 {
                     for (int col = 0; col < columnas; col++)
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         int index = fila * columnas + col;
                         if (index < listaPersonajes.Count)
                         {
                             string item = $"{listaPersonajes[index].Datos.Nombre}";
                             if (index == seleccionIndex)
                             {
-                                Console.BackgroundColor = ConsoleColor.Gray;
-                                Console.ForegroundColor = ConsoleColor.Black;
+                                Console.BackgroundColor = ConsoleColor.DarkYellow;
+                                Console.ForegroundColor = ConsoleColor.DarkYellow;
                             }
                             Console.Write(item.PadRight(columnWidth));
                             Console.ResetColor();
@@ -79,6 +81,7 @@ namespace Seleccion
         public static List<Personaje> MostrarMenuContrincantes(List<Personaje> listaPersonajes, Personaje personajePrincipal)
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Selecciona cómo quieres elegir los contrincantes:");
 
             int seleccionIndex = 0;
@@ -97,10 +100,11 @@ namespace Seleccion
                 // Muestro las opciones
                 for (int i = 0; i < opciones.Length; i++)
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
                     if (i == seleccionIndex)
                     {
-                        Console.BackgroundColor = ConsoleColor.Gray;
-                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.BackgroundColor = ConsoleColor.DarkYellow;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                     }
                     Console.WriteLine(opciones[i]);
                     Console.ResetColor();
@@ -163,6 +167,7 @@ namespace Seleccion
             ConsoleKeyInfo keyInfo; //ConsoleKeyInfo es una estructura que representa la tecla presionada por el usuario y contiene información sobre la tecla y el modificador de tecla (como Shift, Ctrl o Alt) que se utilizaron al presionar la tecla.
 
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Seleccione 15 contrincantes (presione Enter para seleccionar):");
 
             // Muestro los personajes disponibles inicialmente
@@ -188,6 +193,7 @@ namespace Seleccion
 
                             // Muestro los personajes disponibles actualizados después de la selección
                             Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
                             Console.WriteLine("Seleccione 15 contrincantes (presione Enter para seleccionar):");
                             MostrarPersonajesDisponibles(disponibles, seleccionIndex);
                         }
@@ -242,14 +248,15 @@ namespace Seleccion
             {
                 for (int col = 0; col < columnas; col++)
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
                     int index = fila * columnas + col;
                     if (index < disponibles.Count)
                     {
                         string item = $"{disponibles[index].Datos.Nombre}";
                         if (index == seleccionIndex)
                         {
-                            Console.BackgroundColor = ConsoleColor.Gray;
-                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.BackgroundColor = ConsoleColor.DarkYellow;
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
                         }
                         Console.Write(item.PadRight(columnWidth));
                         Console.ResetColor();
@@ -263,6 +270,7 @@ namespace Seleccion
         public static void MostrarContrincantes(List<Personaje> contrincantes)
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Contrincantes seleccionados:");
             foreach (var contrincante in contrincantes)
             {

@@ -47,7 +47,19 @@ namespace CuantoSabes
                 new PreguntasyRespuestas("Cuantas veces muere Goku?", new List<string> { "1", "2", "3" }, 1), 
                 new PreguntasyRespuestas("Como se llama la nieta de Goku y Milk?", new List<string> { "Asta", "Pan", "Apu" }, 1), 
                 new PreguntasyRespuestas("Como se llama el maestro ermitanio que vive en una torre?", new List<string> { "Maestro Karin", "Kamisama", "Gran Patriarca" }, 0), 
-                new PreguntasyRespuestas("De quien es la tecnica Kikoho?", new List<string> { "Krillin", "Yamcha", "Tenshinhan" }, 2) 
+                new PreguntasyRespuestas("De quien es la tecnica Kikoho?", new List<string> { "Krillin", "Yamcha", "Tenshinhan" }, 2),
+                new PreguntasyRespuestas("Cuantos capitulos tiene Dragon Ball Z?", new List<string> { "194", "290", "291" }, 2), 
+                new PreguntasyRespuestas("Cuantas transformaciones tiene Majin Buu, contando su reencarnacion?", new List<string> { "7", "5", "9" }, 2), 
+                new PreguntasyRespuestas("Que es lo que mas teme Goku?", new List<string> { "Milk", "Inyecciones", "Broly" }, 1), 
+                new PreguntasyRespuestas("Cual es la unica tecnica propia de Goku?", new List<string> { "Genkidama", "Kamehameha", "Punio de Dragon" }, 2), 
+                new PreguntasyRespuestas("Quien le dio la espada a Trunks?", new List<string> { "Tapion", "Vegeta", "Goten" }, 0), 
+                new PreguntasyRespuestas("Cuantos anios tenia Gohan cuando Piccoro lo llevo a entrenar?", new List<string> { "4", "5", "6" }, 0), 
+                new PreguntasyRespuestas("Cual de todos los villanos no mato a Krillin?", new List<string> { "Freezer", "Cell", "Majin Buu" }, 1), 
+                new PreguntasyRespuestas("Cuanto tiempo tardo el Maestro Roshi en perfeccionar el Kamehameha?", new List<string> { "50 anios", "3 meses", "30 anios" }, 0), 
+                new PreguntasyRespuestas("Quien derrota a Cell?", new List<string> { "Goku", "Gohan", "Vegeta" }, 1), 
+                new PreguntasyRespuestas("Cual de los siguientes personajes es el amigo de Buu?", new List<string> { "Mr Satan", "Babidi", "Goten" }, 0), 
+                new PreguntasyRespuestas("Que usan los guerreros z para recuperar su fuerza?", new List<string> { "Semilla del ermitanio", "Medicina", "Agua" }, 0), 
+                new PreguntasyRespuestas("Quien destruye el planeta Vegeta?", new List<string> { "Turles", "Freezer", "Bills" }, 1)  
             };
         }
 
@@ -94,12 +106,12 @@ namespace CuantoSabes
 
             if (esRespuestaCorrecta)
             {
-                Console.WriteLine("¡Respuesta correcta!");
+                Console.WriteLine("Puar: ¡Respuesta correcta!");
                 return true;
             }
             else
             {
-                Console.WriteLine("Respuesta incorrecta.");
+                Console.WriteLine("Puar: Respuesta incorrecta.");
                 return false;
             }
         }

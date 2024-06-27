@@ -1,12 +1,11 @@
-using ArmarJsonPjsConApi;
+using Historial;
 using Personajes;
-using Seleccion;
 
 namespace MenuPrincipal
 {
     public class Menu
     {
-        public static void MostrarOpciones()
+        public static void MostrarOpciones(List<HistorialGanadores> listado)
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             string asciiArt = @"
@@ -18,9 +17,8 @@ namespace MenuPrincipal
                                                      /_/                 
 ";
             string[] opciones = {
-                "Comenzar a Jugar",
+                "Jugar",
                 "Historial de Campeones",
-                "Informacion Personajes",
                 "Salir"
             };
 
@@ -138,21 +136,21 @@ namespace MenuPrincipal
                                 // Lógica para "Comenzar a Jugar"
                                 Animaciones.misAnimaciones.CargaDeJuego();
                                 Console.Clear();
-                                Console.ResetColor();
+                                // Console.ResetColor();
                                 List<Personaje> listaPersonajesTorneo = LuchadoresTorneo.Torneo.ObtenerListaPeleadores();
-                                SeleccionUsuario.SeleccionPersonaje(listaPersonajesTorneo);
+                                Presentacion.Juego.CuartaAparicion(listaPersonajesTorneo);
+                                Presentacion.Juego.QuintaAparicion();
+                                Cruces.Peleas.mostrarCruces(listaPersonajesTorneo, listado);
                                 break;
                             case 1:
                                 // Lógica para "Historial de Campeones"
-                                Console.WriteLine("Mostrar historial de campeones...");
+                                HistorialGanadores.mostrarListado(listado);
                                 break;
                             case 2:
-                                // Lógica para "Informacion Personajes"
-                                Console.WriteLine("Mostrar información de personajes...");
-                                break;
-                            case 3:
                                 // Lógica para "Salir"
                                 Console.WriteLine("Saliendo del programa...");
+                                Thread.Sleep(3000); 
+                                Console.Clear();
                                 return;
                         }
                         return;

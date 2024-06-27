@@ -19,13 +19,26 @@ namespace Pelea
             return (int)DanioProvocado;
         }
 
+        public static void contadorPelea()
+        {
+            for (int i = 3; i > 0; i--)
+            {
+                Console.Clear();
+                Console.WriteLine($"La pelea comienza en {i}");
+                Thread.Sleep(1000); // Espera 1 segundo
+            }
+
+            Console.Clear();
+            Console.WriteLine("¡La pelea ha comenzado!");
+        }
+
 
 
         public static Personaje peleaPersonaje(Personaje peleadorUsuario, Personaje contrincante)
         {
 
             // Determina aleatoriamente quién comienza
-            int numeroRandom = rand.Next(0,2);// 0 a 1
+            int numeroRandom = rand.Next(0, 2);// 0 a 1
             int primerTurno = 1;
 
             while (peleadorUsuario.Caracteristicas.Salud > 0 && contrincante.Caracteristicas.Salud > 0)
@@ -34,7 +47,8 @@ namespace Pelea
                 if (numeroRandom == 1)
                 {
                     // Turno del usuario
-                    if(primerTurno == 1){
+                    if (primerTurno == 1)
+                    {
                         Console.WriteLine("Comienza atacando " + peleadorUsuario.Datos.Nombre);
                     }
                     AtaqueEspecial(peleadorUsuario, contrincante);
@@ -44,7 +58,8 @@ namespace Pelea
                 else
                 {
                     // Turno del contrincante
-                    if(primerTurno == 1){
+                    if (primerTurno == 1)
+                    {
                         Console.WriteLine("Comienza atacando " + contrincante.Datos.Nombre);
                     }
                     DefensaEspecial(contrincante, peleadorUsuario);
@@ -72,13 +87,11 @@ namespace Pelea
         {
             Console.WriteLine("\nAtaque Especial");
             int danio = devolverDanio(atacante);
-            Console.WriteLine("Danio = " + danio);
             bool respuesta = MostrarResultados.MostrarResultadosPreguntas();
 
             if (respuesta)
             {
                 danio *= 2;
-                Console.WriteLine("Obtienes un buffo, aprovechalo!");
                 defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
                 if (defensor.Caracteristicas.Salud < 0)
                 {
@@ -88,7 +101,6 @@ namespace Pelea
             }
             else
             {
-                Console.WriteLine("Dejaste escapar una gran oportunidad");
                 defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
                 if (defensor.Caracteristicas.Salud < 0)
                 {
@@ -104,12 +116,10 @@ namespace Pelea
             Console.WriteLine("\nDefensa Especial");
             bool respuesta = MostrarResultados.MostrarResultadosPreguntas();
             int danio = devolverDanio(atacante);
-            Console.WriteLine("Danio = " + danio);
 
             if (respuesta)
             {
                 danio /= 2;
-                Console.WriteLine("Los dioses estan de tu lado");
                 defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
                 if (defensor.Caracteristicas.Salud < 0)
                 {
@@ -119,7 +129,6 @@ namespace Pelea
             }
             else
             {
-                Console.WriteLine("Preparate para recibir el ataque");
                 defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
                 if (defensor.Caracteristicas.Salud < 0)
                 {

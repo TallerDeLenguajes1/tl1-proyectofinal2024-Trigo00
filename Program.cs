@@ -1,11 +1,13 @@
 ﻿using ArmarJsonPjsConApi;
-using Personajes;
+using Historial;
+using Presentacion;
 
 //Esto esta listo
 await CargadorDatos.CargarDatosPersonajesAsync();
 Intro.Presentacion.InicioJuego();
 Console.Clear();
-Presentacion.Juego.mostrarMensajes();
+List<HistorialGanadores> listado = new List<HistorialGanadores>();
+Juego.mostrarMensajes(listado);
 
 
 ///////Cargar datos desde Api//////////
@@ -13,12 +15,5 @@ Presentacion.Juego.mostrarMensajes();
 
 // //Obtengo la lista de peleadores del torneo
 // List<Personaje> listaPersonajesTorneo = LuchadoresTorneo.Torneo.ObtenerListaPeleadores();
-
-// Console.WriteLine("\nLos personajes del torneo son:");
-
-// foreach (var personaje in listaPersonajesTorneo)
-// {
-//     Console.WriteLine(personaje.Datos.Nombre);
-// }
 
 // Cruces.Peleas.mostrarCruces(listaPersonajesTorneo);
