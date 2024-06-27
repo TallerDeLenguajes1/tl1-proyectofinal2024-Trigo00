@@ -14,10 +14,10 @@ namespace ArmarJsonPjsConApi
             List<Personaje> listaPersonajes = new List<Personaje>();
 
             listaPersonajesApi = await InfoApi.traerInformacionApi(listaPersonajesApi);
-            listaPersonajes = Fabrica.cargarDatos(listaPersonajes, listaPersonajesApi);
+            listaPersonajes = Fabrica.CreacionPersonajes(listaPersonajes, listaPersonajesApi);
 
             // Guarda los personajes en un archivo JSON en el directorio "Json"
-            PersonajesJson.GuardarPersonajes(listaPersonajes, "Json/Personajes.json");
+            PersonajesJson.GenerarJsonPersonajes(listaPersonajes, "Json/Personajes.json");
         }
     }
 }

@@ -1,4 +1,3 @@
-using System.Reflection;
 using System.Text.Json;
 using Personajes;
 
@@ -6,19 +5,7 @@ namespace ManejoJson
 {
     public class PersonajesJson
     {
-
-        public static bool Existe(string nombreArchivo)
-        {
-            if (File.Exists(nombreArchivo))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public static void GuardarPersonajes(List<Personaje> misPersonajes, string nombreArchivo)
+        public static void GenerarJsonPersonajes(List<Personaje> misPersonajes, string nombreArchivo)
         {
             // Creo el directorio si no existe
             if (!File.Exists(nombreArchivo))
