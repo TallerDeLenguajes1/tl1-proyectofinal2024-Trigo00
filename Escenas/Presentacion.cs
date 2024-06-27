@@ -10,8 +10,8 @@ namespace Presentacion
         {
 
             Console.WriteLine("              ,$$.       ,$$.      ");
-            Console.WriteLine("             ,$'$.     ,$'  $.     ");
-            Console.WriteLine("             $'  $     $'    $     ");
+            Console.WriteLine("             ,$'$.       ,$'$.     ");
+            Console.WriteLine("             $'  $       $'  $     ");
             Console.WriteLine("            :$    $;   :$    $;    ");
             Console.WriteLine("            $$    $$   $$    $$    ");
             Console.WriteLine("            $$  _.$bqgpd$._  $$    ");
@@ -58,31 +58,31 @@ namespace Presentacion
             {
                 Console.Clear();
 
-                // Mover el cursor al principio de la consola
+                // Muevo el mouse al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
+                // Imprimo el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
+                // Obtengo el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                // Cuento el número de líneas en el texto
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 // Cambiar el mensaje después de un tiempo
@@ -167,35 +167,35 @@ namespace Presentacion
             {
                 Console.Clear();
 
-                // Mover el cursor al principio de la consola
+                // Muevo el mouse al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
+                // Imprimo el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
+                // Obtengo el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                // Cuento el número de líneas en el texto
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
-                Thread.Sleep(4000); // Esperar 4 segundos antes de cambiar el mensaje
+                Thread.Sleep(4000); // Espera 4 segundos antes de cambiar el mensaje
 
                 Console.Clear();
 
@@ -219,35 +219,32 @@ namespace Presentacion
             {
                 Console.Clear();
 
-                // Mover el cursor al principio de la consola
+                // Muevo el mouse al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
-                Thread.Sleep(4000); // Esperar 4 segundos antes de cambiar el mensaje
+                Thread.Sleep(4000); // Espero 4 segundos antes de cambiar el mensaje
 
                 Console.Clear();
 
@@ -269,35 +266,35 @@ namespace Presentacion
                 Console.Clear();
                 Console.CursorVisible = false;
 
-                // Mover el cursor al principio de la consola
+                // Muevo el mouse al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
+                // Imprimo el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
+                // Obtengo el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                // Cuento el número de líneas en el texto
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
-                Thread.Sleep(4000); // Esperar 4 segundos antes de cambiar el mensaje
+                Thread.Sleep(4000); // Espero 4 segundos antes de cambiar el mensaje
 
                 Console.Clear();
 
@@ -331,31 +328,31 @@ namespace Presentacion
                 Console.Clear();
                 Console.CursorVisible = false;
 
-                // Mover el cursor al principio de la consola
+                // Muevo el mouse al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
+                // Imprimo el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
+                // Obtengo el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                // Cuento el número de líneas en el texto
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
@@ -386,31 +383,31 @@ namespace Presentacion
                 Console.Clear();
                 Console.CursorVisible = false;
 
-                // Mover el cursor al principio de la consola
+                // Muevo el cursor al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
+                // Imprimo el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
+                // Obtengo el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                // Cuento el número de líneas en el texto
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
@@ -436,31 +433,31 @@ namespace Presentacion
                 Console.Clear();
                 Console.CursorVisible = false;
 
-                // Mover el cursor al principio de la consola
+                // Muevo el cursor al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
+                // Imprimo el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
+                // Obtengo el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                // Cuento el número de líneas en el texto
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
@@ -486,31 +483,31 @@ namespace Presentacion
                 Console.Clear();
                 Console.CursorVisible = false;
 
-                // Mover el cursor al principio de la consola
+                // Muevo el cursor al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
+                // Imprimo el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
+                // Obtengo el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                // Cuento el número de líneas en el texto
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
@@ -535,31 +532,31 @@ namespace Presentacion
                 Console.Clear();
                 Console.CursorVisible = false;
 
-                // Mover el cursor al principio de la consola
+                // Muevo el cursor al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
+                // Imprimo el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
+                // Obtengo el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                // Cuento el número de líneas en el texto
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
@@ -586,31 +583,31 @@ namespace Presentacion
                 Console.Clear();
                 Console.CursorVisible = false;
 
-                // Mover el cursor al principio de la consola
+                // Muevo el cursor al principio de la consola
                 Console.SetCursorPosition(0, 0);
 
                 // Imprimo el ASCII de Puar
                 mostrarPuar();
 
-                // Imprimir el mensaje al costado
+                // Imprimo el mensaje al costado
                 Console.SetCursorPosition(40, 0);
 
-                // Obtener el tamaño de la ventana de la consola
+                // Obtengo el tamaño de la ventana de la consola
                 int windowHeight = Console.WindowHeight;
 
-                // Contar el número de líneas en el texto
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                // Cuento el número de líneas en el texto
+                int lineasDelTexto = mensajes[mensajeNumero].Split('\n').Length;
 
-                // Calcular el número de líneas de relleno necesarias para centrar el texto
-                int paddingLines = (windowHeight - textLineCount) / 2;
+                // Calculo el número de líneas de relleno necesarias para centrar el texto
+                int paddingLines = (windowHeight - lineasDelTexto) / 2;
 
-                // Imprimir líneas en blanco antes del texto para centrarlo verticalmente
+                // Imprimo líneas en blanco antes del texto para centrarlo verticalmente
                 for (int j = 0; j < paddingLines - 5; j++)
                 {
                     Console.WriteLine();
                 }
 
-                // Imprimir el texto
+                // Imprimo el texto
                 Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
                 mensajeNumero = (mensajeNumero + 1) % mensajes.Count;

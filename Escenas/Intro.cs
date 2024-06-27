@@ -31,7 +31,7 @@ namespace Intro
 
             // Esperar a que el usuario ingrese una tecla sin mostrarla en la consola
             Console.CursorVisible = false;
-            ConsoleKeyInfo key = Console.ReadKey(intercept: true);
+            Console.ReadKey(true);
 
 
         }

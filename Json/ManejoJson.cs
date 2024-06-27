@@ -20,7 +20,7 @@ namespace ManejoJson
         }
         public static void GuardarPersonajes(List<Personaje> misPersonajes, string nombreArchivo)
         {
-            // Creo el directorio si no existe
+            // Creo el archivo si no existe
             if (!File.Exists(nombreArchivo))
             {
                 var opciones = new JsonSerializerOptions

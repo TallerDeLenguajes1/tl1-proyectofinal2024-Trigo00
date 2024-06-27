@@ -90,7 +90,7 @@ namespace Seleccion
                 "Seleccionar contrincantes manualmente"
             };
 
-            // Oculto el cursor
+            // Oculto el mouse
             Console.CursorVisible = false;
 
             while (true)
@@ -124,7 +124,7 @@ namespace Seleccion
                         break;
                     case ConsoleKey.Enter:
                         Console.Clear();
-                        // Muestro el cursor nuevamente antes de salir del método
+                        // Muestro el mouse nuevamente antes de salir del método
                         Console.CursorVisible = true;
                         switch (seleccionIndex)
                         {
@@ -234,7 +234,7 @@ namespace Seleccion
 
         public static void MostrarPersonajesDisponibles(List<Personaje> disponibles, int seleccionIndex)
         {
-            Console.SetCursorPosition(0, 3); // Posiciono el cursor debajo del título
+            Console.SetCursorPosition(0, 3); // Posiciono el mouse debajo del título
 
             int columnas = 3; // Número de columnas
             int filas = (int)Math.Ceiling(disponibles.Count / (double)columnas);
@@ -243,7 +243,7 @@ namespace Seleccion
             int maxNombreLength = disponibles.Max(p => p.Datos.Nombre.Length);
             int columnWidth = maxNombreLength + 5; // Ajusto el espacio entre columnas
 
-            // Mostrar los personajes en columnas
+            // Muestro los personajes en columnas
             for (int fila = 0; fila < filas; fila++)
             {
                 for (int col = 0; col < columnas; col++)

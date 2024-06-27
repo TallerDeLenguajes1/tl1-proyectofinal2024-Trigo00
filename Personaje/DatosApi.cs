@@ -33,7 +33,7 @@ namespace DatosApi
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                // Deserializar la respuesta JSON en ApiResponse
+                // Deserializo la respuesta JSON en ApiResponse
                 var apiResponse = JsonSerializer.Deserialize<ApiResponse>(responseBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
                 if (apiResponse != null && apiResponse.Items != null)

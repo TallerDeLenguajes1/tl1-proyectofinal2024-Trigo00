@@ -31,21 +31,21 @@ namespace MenuPrincipal
             {
                 Console.Clear();
 
-                // Obtener el ancho de la consola
+                // Obtengo el ancho de la consola
                 int anchoConsola = Console.WindowWidth;
 
-                // Dividir el arte ASCII en líneas y centrarlas
-                string[] asciiLines = asciiArt.Split('\n');
-                foreach (var line in asciiLines)
+                // Divido el arte ASCII en líneas y luego las centro
+                string[] lineasAscii = asciiArt.Split('\n');
+                foreach (var linea in lineasAscii)
                 {
-                    int espaciosBlanco = (anchoConsola - line.Length) / 2;
+                    int espaciosBlanco = (anchoConsola - linea.Length) / 2;
                     if (espaciosBlanco > 0)
                     {
                         Console.Write(new string(' ', espaciosBlanco));
                     }
 
-                    // Imprimir cada caracter con color DarkYellow
-                    foreach (char c in line)
+                    // Esto hago para que no me pinte todos los espacios en blanco, sino solo el texto
+                    foreach (char c in linea)
                     {
                         if (c == ' ')
                         {
@@ -60,7 +60,7 @@ namespace MenuPrincipal
                     Console.WriteLine();
                 }
 
-                // Mostrar las opciones
+                // Muestro las opciones
                 for (int i = 0; i < opciones.Length; i++)
                 {
                     int espaciosBlanco = (anchoConsola - opciones[i].Length) / 2;
@@ -80,11 +80,11 @@ namespace MenuPrincipal
                     }
 
                     Console.WriteLine(opciones[i]);
-                    Console.ResetColor(); // Restablecer los colores después de imprimir cada opción
+                    Console.ResetColor(); // Restablezco los colores después de imprimir cada opción
                 }
             }
 
-            // Dibujar el menú inicial
+            // Dibujo el menú inicial
             DibujarMenu();
 
             while (true)
@@ -102,8 +102,8 @@ namespace MenuPrincipal
                         Console.Clear();
                         // Mostrar el título nuevamente antes de salir del método
                         int anchoConsola = Console.WindowWidth;
-                        string[] asciiLines = asciiArt.Split('\n');
-                        foreach (var line in asciiLines)
+                        string[] lineasAscii = asciiArt.Split('\n');
+                        foreach (var line in lineasAscii)
                         {
                             int espaciosBlanco = (anchoConsola - line.Length) / 2;
                             if (espaciosBlanco > 0)
@@ -111,7 +111,6 @@ namespace MenuPrincipal
                                 Console.Write(new string(' ', espaciosBlanco));
                             }
 
-                            // Imprimir cada caracter con color DarkYellow
                             foreach (char c in line)
                             {
                                 if (c == ' ')
@@ -127,27 +126,25 @@ namespace MenuPrincipal
                             Console.WriteLine();
                         }
                         Console.WriteLine($"Seleccionaste: {opciones[seleccionIndex]}");
-                        // Aquí puedes agregar la lógica que desees al seleccionar una opción
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
                         switch (seleccionIndex)
                         {
                             case 0:
-                                // Lógica para "Comenzar a Jugar"
+                                // Lógica de "Jugar"
                                 Animaciones.misAnimaciones.CargaDeJuego();
                                 Console.Clear();
-                                // Console.ResetColor();
                                 List<Personaje> listaPersonajesTorneo = LuchadoresTorneo.Torneo.ObtenerListaPeleadores();
                                 Presentacion.Juego.CuartaAparicion(listaPersonajesTorneo);
                                 Presentacion.Juego.QuintaAparicion();
                                 Cruces.Peleas.mostrarCruces(listaPersonajesTorneo, listado);
                                 break;
                             case 1:
-                                // Lógica para "Historial de Campeones"
+                                // Lógica de "Historial de Campeones"
                                 HistorialGanadores.mostrarListado(listado);
                                 break;
                             case 2:
-                                // Lógica para "Salir"
+                                // Lógica de "Salir"
                                 Console.WriteLine("Saliendo del programa...");
                                 Thread.Sleep(3000); 
                                 Console.Clear();
@@ -156,7 +153,7 @@ namespace MenuPrincipal
                         return;
                 }
 
-                // Actualizar el menú
+                // Actualizo el menú
                 DibujarMenu();
             }
         }

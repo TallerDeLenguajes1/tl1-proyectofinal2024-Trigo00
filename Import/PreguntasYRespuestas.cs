@@ -67,7 +67,7 @@ namespace CuantoSabes
         public PreguntasyRespuestas ObtenerPreguntaAleatoria()
         {
             Random random = new Random();
-            int index = random.Next(ListaPreguntas.Count); // Genera un número aleatorio entre 0 y el tamaño de la lista
+            int index = random.Next(ListaPreguntas.Count); // Genero un número aleatorio entre 0 y el tamaño de la lista
             return ListaPreguntas[index];
         }
     }

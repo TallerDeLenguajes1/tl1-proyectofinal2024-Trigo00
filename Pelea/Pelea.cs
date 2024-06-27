@@ -37,7 +37,7 @@ namespace Pelea
         public static Personaje peleaPersonaje(Personaje peleadorUsuario, Personaje contrincante)
         {
 
-            // Determina aleatoriamente quién comienza
+            // Determino aleatoriamente quién comienza
             int numeroRandom = rand.Next(0, 2);// 0 a 1
             int primerTurno = 1;
 

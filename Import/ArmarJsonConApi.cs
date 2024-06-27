@@ -16,7 +16,7 @@ namespace ArmarJsonPjsConApi
             listaPersonajesApi = await InfoApi.traerInformacionApi(listaPersonajesApi);
             listaPersonajes = Fabrica.cargarDatos(listaPersonajes, listaPersonajesApi);
 
-            // Guarda los personajes en un archivo JSON en el directorio "Json"
+            // Guardo los personajes en un archivo JSON en el directorio "Json"
             PersonajesJson.GuardarPersonajes(listaPersonajes, "Json/Personajes.json");
         }
     }

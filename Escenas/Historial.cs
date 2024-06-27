@@ -21,15 +21,6 @@ namespace Historial
             HistorialGanadores datos = new HistorialGanadores(PersonajeGanador, horaActual);
             listaHistorial.Add(datos);
         }
-
-        // public static void mostrarListado(List<HistorialGanadores> listado){
-        //     Console.WriteLine("Ganadores recientes");
-        //     foreach (var ganador in listado)
-        //     {
-        //         Console.WriteLine(ganador.Hora + ":" + ganador.Ganador.Datos.Nombre);
-        //     }
-        // }
-
         public static void mostrarListado(List<HistorialGanadores> listado)
         {
             Console.WriteLine("GANADORES DEL TORNEO");
@@ -57,7 +48,7 @@ namespace Historial
             string frase = "Pulse una tecla regresar al menu...";
             Console.WriteLine(frase);
             Console.CursorVisible = false;
-            ConsoleKeyInfo key = Console.ReadKey(intercept: true);
+            Console.ReadKey(true);
             Menu.MostrarOpciones(listado);
         }
     }
