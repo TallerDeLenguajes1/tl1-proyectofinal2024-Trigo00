@@ -22,15 +22,9 @@ namespace Cruces
             MostrarCrucesDeRonda("Octavos de Final", lista);
             // Simulo y muestro los cruces de cuartos de final
             List<Tuple<Personaje, Personaje>> crucesOctavos = GenerarCruces(lista);
-<<<<<<< HEAD
-            Presentacion.Juego.SextaAparicion();
-            if(VerificarSiEstoy(crucesOctavos, personajePrincipal)){//Verifico si estoy en la lista
-                Animaciones.misAnimaciones.CargaDePelea();
-=======
             Juego.ExplicacionSobreCombates();
             if(VerificarSiEstoy(crucesOctavos, personajePrincipal)){
                 misAnimaciones.AnimacionCargaDePelea();
->>>>>>> Prueba
             }
             List<Personaje> ganadoresOctavos = SimularPeleas(crucesOctavos, personajePrincipal);
             MostrarCrucesDeRonda("Cuartos de Final", ganadoresOctavos);

@@ -15,10 +15,6 @@ namespace Historial
             HistorialGanadores datos = new HistorialGanadores(PersonajeGanador, horaActual);
             listaHistorial.Add(datos);
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> Prueba
         public static void mostrarListado(List<HistorialGanadores> listado)
         {
             Console.WriteLine("GANADORES DEL TORNEO");

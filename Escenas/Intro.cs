@@ -22,11 +22,7 @@ namespace Intro
             // Espera que el usuario ingrese una tecla sin mostrarla en la consola
             Console.CursorVisible = false;
             Console.ReadKey(true);
-<<<<<<< HEAD
-
-=======
             Console.Clear();
->>>>>>> Prueba
 
         }
     }
