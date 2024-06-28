@@ -1,9 +1,9 @@
 namespace Intro
 {
 
-    public class Presentacion
+    public class PresentacionJuego
     {
-        public static void InicioJuego()
+        public static void Presentacion()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine(@"
@@ -14,25 +14,19 @@ namespace Intro
             ");
 
             string frase = "Pulse una tecla para iniciar...";
-            // int velocidad = 20; // milisegundos
-            // for (int i = 0; i < helloWorld.Length; i++)
-            // {
-            //     Console.Write(helloWorld[i]);
-            //     if (i + 1 < helloWorld.Length && helloWorld[i + 1] == ' ')
-            //     {
-            //         Console.Write(' ');
-            //     }
-            //     Thread.Sleep(velocidad);
-            // }
 
             Console.Write(new string(' ', (Console.WindowWidth - frase.Length) / 5));
             Console.WriteLine(frase);
             Console.WriteLine("\n\n");
 
-            // Esperar a que el usuario ingrese una tecla sin mostrarla en la consola
+            // Espera que el usuario ingrese una tecla sin mostrarla en la consola
             Console.CursorVisible = false;
             Console.ReadKey(true);
+<<<<<<< HEAD
 
+=======
+            Console.Clear();
+>>>>>>> Prueba
 
         }
     }

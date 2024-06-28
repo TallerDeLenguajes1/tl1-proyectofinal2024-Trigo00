@@ -1,5 +1,9 @@
+using Animaciones;
+using Cruces;
 using Historial;
+using Info;
 using Personajes;
+using Presentacion;
 
 namespace MenuPrincipal
 {
@@ -19,30 +23,39 @@ namespace MenuPrincipal
             string[] opciones = {
                 "Jugar",
                 "Historial de Campeones",
+                "Informacion de Jugadores",
                 "Salir"
             };
 
             int seleccionIndex = 0;
 
-            // Ocultar el cursor
             Console.CursorVisible = false;
 
             void DibujarMenu()
             {
                 Console.Clear();
 
+<<<<<<< HEAD
                 // Obtengo el ancho de la consola
                 int anchoConsola = Console.WindowWidth;
 
                 // Divido el arte ASCII en líneas y luego las centro
                 string[] lineasAscii = asciiArt.Split('\n');
                 foreach (var linea in lineasAscii)
+=======
+                int anchoConsola = Console.WindowWidth;
+
+                // Divido el ASCII en líneas y las centro
+                string[] asciiLineas = asciiArt.Split('\n');
+                foreach (var linea in asciiLineas)
+>>>>>>> Prueba
                 {
                     int espaciosBlanco = (anchoConsola - linea.Length) / 2;
                     if (espaciosBlanco > 0)
                     {
                         Console.Write(new string(' ', espaciosBlanco));
                     }
+<<<<<<< HEAD
 
                     // Esto hago para que no me pinte todos los espacios en blanco, sino solo el texto
                     foreach (char c in linea)
@@ -57,6 +70,10 @@ namespace MenuPrincipal
                             Console.Write(c);
                         }
                     }
+=======
+                    // Imprimo cada caracter con color DarkYellow
+                    ImprimoCaracteres(linea);
+>>>>>>> Prueba
                     Console.WriteLine();
                 }
 
@@ -100,16 +117,22 @@ namespace MenuPrincipal
                         break;
                     case ConsoleKey.Enter:
                         Console.Clear();
-                        // Mostrar el título nuevamente antes de salir del método
+                        // Muestro el título antes de salir del método
                         int anchoConsola = Console.WindowWidth;
+<<<<<<< HEAD
                         string[] lineasAscii = asciiArt.Split('\n');
                         foreach (var line in lineasAscii)
+=======
+                        string[] asciiLineas = asciiArt.Split('\n');
+                        foreach (var linea in asciiLineas)
+>>>>>>> Prueba
                         {
-                            int espaciosBlanco = (anchoConsola - line.Length) / 2;
+                            int espaciosBlanco = (anchoConsola - linea.Length) / 2;
                             if (espaciosBlanco > 0)
                             {
                                 Console.Write(new string(' ', espaciosBlanco));
                             }
+<<<<<<< HEAD
 
                             foreach (char c in line)
                             {
@@ -123,6 +146,9 @@ namespace MenuPrincipal
                                     Console.Write(c);
                                 }
                             }
+=======
+                            ImprimoCaracteres(linea);
+>>>>>>> Prueba
                             Console.WriteLine();
                         }
                         Console.WriteLine($"Seleccionaste: {opciones[seleccionIndex]}");
@@ -131,20 +157,33 @@ namespace MenuPrincipal
                         switch (seleccionIndex)
                         {
                             case 0:
+<<<<<<< HEAD
                                 // Lógica de "Jugar"
                                 Animaciones.misAnimaciones.CargaDeJuego();
+=======
+                                // Lógica para "Comenzar a Jugar"
+                                misAnimaciones.AnimacionCargaDeJuego();
+>>>>>>> Prueba
                                 Console.Clear();
                                 List<Personaje> listaPersonajesTorneo = LuchadoresTorneo.Torneo.ObtenerListaPeleadores();
-                                Presentacion.Juego.CuartaAparicion(listaPersonajesTorneo);
-                                Presentacion.Juego.QuintaAparicion();
-                                Cruces.Peleas.mostrarCruces(listaPersonajesTorneo, listado);
+                                Juego.AparicionParaMostrarParticipantes(listaPersonajesTorneo);
+                                Juego.AparicionParaSorteo();
+                                Peleas.mostrarCruces(listaPersonajesTorneo, listado);
                                 break;
                             case 1:
                                 // Lógica de "Historial de Campeones"
                                 HistorialGanadores.mostrarListado(listado);
                                 break;
                             case 2:
+<<<<<<< HEAD
                                 // Lógica de "Salir"
+=======
+                                // Lógica para "Informacion de jugadores"
+                                InfoPlayers.MostrarInformacionPersonajes(listado);
+                                break;
+                            case 3:
+                                // Lógica para "Salir"
+>>>>>>> Prueba
                                 Console.WriteLine("Saliendo del programa...");
                                 Thread.Sleep(3000); 
                                 Console.Clear();
@@ -153,8 +192,28 @@ namespace MenuPrincipal
                         return;
                 }
 
+<<<<<<< HEAD
                 // Actualizo el menú
+=======
+                // Actualiza el menú
+>>>>>>> Prueba
                 DibujarMenu();
+            }
+        }
+
+        private static void ImprimoCaracteres(string line)
+        {
+            foreach (char c in line)
+            {
+                if (c == ' ')
+                {
+                    Console.Write(' ');
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.Write(c);
+                }
             }
         }
     }

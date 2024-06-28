@@ -52,7 +52,8 @@ namespace Pelea
                         Console.WriteLine("Comienza atacando " + peleadorUsuario.Datos.Nombre);
                     }
                     AtaqueEspecial(peleadorUsuario, contrincante);
-                    // Cambia de turno
+
+                    // Cambio de turno
                     numeroRandom = 0;
                 }
                 else
@@ -63,7 +64,8 @@ namespace Pelea
                         Console.WriteLine("Comienza atacando " + contrincante.Datos.Nombre);
                     }
                     DefensaEspecial(contrincante, peleadorUsuario);
-                    // Cambia de turno
+
+                    // Cambio de turno
                     numeroRandom = 1;
                 }
                 primerTurno++;
@@ -92,25 +94,14 @@ namespace Pelea
             if (respuesta)
             {
                 danio *= 2;
-                defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
-                if (defensor.Caracteristicas.Salud < 0)
-                {
-                    defensor.Caracteristicas.Salud = 0;
-                }
-                Console.WriteLine($"\n{atacante.Datos.Nombre} ataca a {defensor.Datos.Nombre} y causa {danio} puntos de daño. Salud restante de {defensor.Datos.Nombre}: {defensor.Caracteristicas.Salud}");
+                AplicacionDanioYMensaje(atacante, defensor, danio);
             }
             else
             {
-                defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
-                if (defensor.Caracteristicas.Salud < 0)
-                {
-                    defensor.Caracteristicas.Salud = 0;
-                }
-                Console.WriteLine($"\n{atacante.Datos.Nombre} ataca a {defensor.Datos.Nombre} y causa {danio} puntos de daño. Salud restante de {defensor.Datos.Nombre}: {defensor.Caracteristicas.Salud}");
+                AplicacionDanioYMensaje(atacante, defensor, danio);
             }
 
         }
-
         private static void DefensaEspecial(Personaje atacante, Personaje defensor)
         {
             Console.WriteLine("\nDefensa Especial");
@@ -120,23 +111,23 @@ namespace Pelea
             if (respuesta)
             {
                 danio /= 2;
-                defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
-                if (defensor.Caracteristicas.Salud < 0)
-                {
-                    defensor.Caracteristicas.Salud = 0;
-                }
-                Console.WriteLine($"\n{atacante.Datos.Nombre} ataca a {defensor.Datos.Nombre} y causa {danio} puntos de daño. Salud restante de {defensor.Datos.Nombre}: {defensor.Caracteristicas.Salud}");
+                AplicacionDanioYMensaje(atacante, defensor, danio);
             }
             else
             {
-                defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
-                if (defensor.Caracteristicas.Salud < 0)
-                {
-                    defensor.Caracteristicas.Salud = 0;
-                }
-                Console.WriteLine($"\n{atacante.Datos.Nombre} ataca a {defensor.Datos.Nombre} y causa {danio} puntos de daño. Salud restante de {defensor.Datos.Nombre}: {defensor.Caracteristicas.Salud}");
+                AplicacionDanioYMensaje(atacante, defensor, danio);
             }
 
+        }
+
+        private static void AplicacionDanioYMensaje(Personaje atacante, Personaje defensor, int danio)
+        {
+            defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
+            if (defensor.Caracteristicas.Salud < 0)
+            {
+                defensor.Caracteristicas.Salud = 0;
+            }
+            Console.WriteLine($"\n{atacante.Datos.Nombre} ataca a {defensor.Datos.Nombre} y causa {danio} puntos de daño. Salud restante de {defensor.Datos.Nombre}: {defensor.Caracteristicas.Salud}");
         }
 
 

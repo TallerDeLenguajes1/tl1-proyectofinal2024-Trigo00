@@ -11,12 +11,12 @@ namespace LuchadoresTorneo
             string jsonData = File.ReadAllText("Json/Personajes.json");
             List<Personaje> personajes = JsonSerializer.Deserialize<List<Personaje>>(jsonData);
 
-            Presentacion.Juego.SegundaAparicion();
+            Presentacion.Juego.AparicionParaElegirPersonaje();
 
             //Seleccion de personaje del usuario
             Personaje personajeSeleccionado = Seleccion.SeleccionUsuario.SeleccionPersonaje(personajes);
 
-            Presentacion.Juego.TerceraAparicion();
+            Presentacion.Juego.ExplicacionEleccionOponentes();
 
             //Eleccion de resto de personajes del torneo
             List<Personaje> listaPersonajesSeleccionados = Seleccion.SeleccionUsuario.MostrarMenuContrincantes(personajes, personajeSeleccionado);

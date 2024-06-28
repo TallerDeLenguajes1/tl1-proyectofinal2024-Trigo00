@@ -1,6 +1,9 @@
 using Personajes;
 using Historial;
 using MenuPrincipal;
+using Animaciones;
+using Pelea;
+using Presentacion;
 
 namespace Cruces
 {
@@ -19,9 +22,15 @@ namespace Cruces
             MostrarCrucesDeRonda("Octavos de Final", lista);
             // Simulo y muestro los cruces de cuartos de final
             List<Tuple<Personaje, Personaje>> crucesOctavos = GenerarCruces(lista);
+<<<<<<< HEAD
             Presentacion.Juego.SextaAparicion();
             if(VerificarSiEstoy(crucesOctavos, personajePrincipal)){//Verifico si estoy en la lista
                 Animaciones.misAnimaciones.CargaDePelea();
+=======
+            Juego.ExplicacionSobreCombates();
+            if(VerificarSiEstoy(crucesOctavos, personajePrincipal)){
+                misAnimaciones.AnimacionCargaDePelea();
+>>>>>>> Prueba
             }
             List<Personaje> ganadoresOctavos = SimularPeleas(crucesOctavos, personajePrincipal);
             MostrarCrucesDeRonda("Cuartos de Final", ganadoresOctavos);
@@ -29,7 +38,7 @@ namespace Cruces
             // Simulo y muestro los cruces de semifinales
             List<Tuple<Personaje, Personaje>> crucesCuartos = GenerarCruces(ganadoresOctavos);
             if(VerificarSiEstoy(crucesCuartos, personajePrincipal)){
-                Animaciones.misAnimaciones.CargaDePelea();
+                misAnimaciones.AnimacionCargaDePelea();
             }
             List<Personaje> ganadoresCuartos = SimularPeleas(crucesCuartos, personajePrincipal);
             MostrarCrucesDeRonda("Semifinales", ganadoresCuartos);
@@ -37,7 +46,7 @@ namespace Cruces
             // Simulo y muestro la final
             List<Tuple<Personaje, Personaje>> crucesSemifinales = GenerarCruces(ganadoresCuartos);
             if(VerificarSiEstoy(crucesSemifinales, personajePrincipal)){
-                Animaciones.misAnimaciones.CargaDePelea();
+                misAnimaciones.AnimacionCargaDePelea();
             }
             List<Personaje> ganadoresSemifinales = SimularPeleas(crucesSemifinales, personajePrincipal);
             MostrarCrucesDeRonda("Final", ganadoresSemifinales);
@@ -45,12 +54,12 @@ namespace Cruces
             // Muestro al ganador final del torneo
             List<Tuple<Personaje, Personaje>> cruceFinal = GenerarCruces(ganadoresSemifinales);
             if(VerificarSiEstoy(cruceFinal, personajePrincipal)){
-                Animaciones.misAnimaciones.CargaDePelea();
+                misAnimaciones.AnimacionCargaDePelea();
             }
             List<Personaje> ganadorFinales = SimularPeleaFinal(cruceFinal, personajePrincipal);
             Console.WriteLine($"¡El ganador del torneo es: {ganadorFinales[0].Datos.Nombre}!");
             Thread.Sleep(4000);
-            Animaciones.misAnimaciones.RegresarAMenu();
+            misAnimaciones.AnimacionRegresarAMenu();
             Console.Clear();
             HistorialGanadores.cargarHistorial(ganadorFinales[0], listado);
             Menu.MostrarOpciones(listado);
@@ -102,48 +111,21 @@ namespace Cruces
             {
                 Personaje ganador;
 
+                // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
                 if (pelea.Item1 == personajeUsuario)
                 {
-                    Pelea.PeleaUsuario.contadorPelea();
-                    // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
-                    ganador = Pelea.PeleaUsuario.peleaPersonaje(pelea.Item1, pelea.Item2);
-                    if (ganador != personajeUsuario)
-                    {
-                        Console.WriteLine("¡Perdiste!");
-                        Thread.Sleep(3000);
-                        Console.Clear();
-                        Presentacion.Juego.SeptimaAparicion();
-                    }
-                    else
-                    {
-                        Console.WriteLine("¡Ganaste!, avanzas a la siguiente ronda.");
-                        Thread.Sleep(3000);
-                        Console.Clear();
-                        Presentacion.Juego.OctavaAparicion();
-                    }
+                    PeleaUsuario.contadorPelea();
+                    ganador = PeleaUsuario.peleaPersonaje(pelea.Item1, pelea.Item2);
+                    MensajeSegunResultado(personajeUsuario, ganador);
                 }
                 else
                 {
+                    // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
                     if (pelea.Item2 == personajeUsuario)
                     {
-                        Pelea.PeleaUsuario.contadorPelea();
-                        // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
-                        ganador = Pelea.PeleaUsuario.peleaPersonaje(pelea.Item2, pelea.Item1);
-                        if (ganador != personajeUsuario)
-                        {
-                            Console.WriteLine("¡Perdiste!");
-                            Thread.Sleep(3000);
-                            Console.Clear();
-                            Presentacion.Juego.SeptimaAparicion();
-
-                        }
-                        else
-                        {
-                            Console.WriteLine("¡Ganaste!, avanzas a la siguiente ronda.");
-                            Thread.Sleep(3000);
-                            Console.Clear();
-                            Presentacion.Juego.OctavaAparicion();
-                        }
+                        PeleaUsuario.contadorPelea();
+                        ganador = PeleaUsuario.peleaPersonaje(pelea.Item2, pelea.Item1);
+                        MensajeSegunResultado(personajeUsuario, ganador);
                     }
                     else
                     {
@@ -152,10 +134,29 @@ namespace Cruces
                     }
 
                 }
-                subirEstadisticasGanador(ganador); //Subo las estadisticas del pj que gana un combate en el torneo
+                subirEstadisticasGanador(ganador);
                 ganadores.Add(ganador);
             }
             return ganadores;
+        }
+
+        private static void MensajeSegunResultado(Personaje personajeUsuario, Personaje ganador)
+        {
+            if (ganador != personajeUsuario)
+            {
+                Console.WriteLine("¡Perdiste!");
+                Thread.Sleep(3000);
+                Console.Clear();
+                Juego.AparicionCuandoPerdesCombate();
+
+            }
+            else
+            {
+                Console.WriteLine("¡Ganaste!, avanzas a la siguiente ronda.");
+                Thread.Sleep(3000);
+                Console.Clear();
+                Juego.AparicionCuandoGanasCombate();
+            }
         }
 
         private static List<Personaje> SimularPeleaFinal(List<Tuple<Personaje, Personaje>> cruces, Personaje personajeUsuario)
@@ -170,38 +171,38 @@ namespace Cruces
 
                 if (pelea.Item1 == personajeUsuario)
                 {
-                    Pelea.PeleaUsuario.contadorPelea();
+                    PeleaUsuario.contadorPelea();
                     // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
-                    ganador = Pelea.PeleaUsuario.peleaPersonaje(pelea.Item1, pelea.Item2);
+                    ganador = PeleaUsuario.peleaPersonaje(pelea.Item1, pelea.Item2);
                     if (ganador != personajeUsuario)
                     {
                         Console.WriteLine("¡Perdiste!");
                         Thread.Sleep(3000);
                         Console.Clear();
-                        Presentacion.Juego.SeptimaAparicion();
+                        Juego.AparicionCuandoPerdesCombate();
                     }
                     else
                     {
-                        Presentacion.Juego.Aparicion10();
+                        Juego.AparicionAlGanarTorneo();
                     }
                 }
                 else
                 {
                     if (pelea.Item2 == personajeUsuario)
                     {
-                        Pelea.PeleaUsuario.contadorPelea();
+                        PeleaUsuario.contadorPelea();
                         // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
-                        ganador = Pelea.PeleaUsuario.peleaPersonaje(pelea.Item2, pelea.Item1);
+                        ganador = PeleaUsuario.peleaPersonaje(pelea.Item2, pelea.Item1);
                         if (ganador != personajeUsuario)
                         {
                             Console.WriteLine("¡Perdiste!");
                             Thread.Sleep(3000);
                             Console.Clear();
-                            Presentacion.Juego.SeptimaAparicion();
+                            Juego.AparicionCuandoPerdesCombate();
                         }
                         else
                         {
-                            Presentacion.Juego.Aparicion10();
+                            Juego.AparicionAlGanarTorneo();
                         }
                     }
                     else
@@ -216,7 +217,7 @@ namespace Cruces
             return ganadores;
         }
 
-        public static void subirEstadisticasGanador(Personaje ganador){
+        private static void subirEstadisticasGanador(Personaje ganador){
 
             ganador.Caracteristicas.Agilidad += 2;
             ganador.Caracteristicas.Energia += 2;
@@ -226,7 +227,7 @@ namespace Cruces
 
         }
 
-        public static bool VerificarSiEstoy(List<Tuple<Personaje, Personaje>> cruces, Personaje personajeUsuario)
+        private static bool VerificarSiEstoy(List<Tuple<Personaje, Personaje>> cruces, Personaje personajeUsuario)
         {
 
             foreach (var pelea in cruces)

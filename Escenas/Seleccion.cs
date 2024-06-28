@@ -12,7 +12,7 @@ namespace Seleccion
                 return null;
             }
 
-            int columnas = 3; // Número de columnas
+            int columnas = 3;
             int filas = (int)Math.Ceiling(listaPersonajes.Count / (double)columnas); //Math.Ceiling: Devuelve el valor integral más pequeño que es mayor o igual que el número decimal especificado.
 
             // Calculo el ancho de cada columna
@@ -73,6 +73,7 @@ namespace Seleccion
                         Console.WriteLine("Presiona cualquier tecla para continuar...");
                         Console.ReadKey(true);
                         Console.CursorVisible = false;
+
                         return seleccionado;
                 }
             }
@@ -110,7 +111,6 @@ namespace Seleccion
                     Console.ResetColor();
                 }
 
-                // Evito que se muestre un espacio en blanco al final
                 Console.WriteLine();
 
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
@@ -151,6 +151,7 @@ namespace Seleccion
             //.OrderBy(p => random.Next()): ordena la colección resultante del filtro anterior en un orden aleatorio
             //.Take(15): selecciona los primeros 15 elementos de la colección ordenada aleatoriamente.
             //.ToList(): convierte la colección de los 15 personajes seleccionados en una lista de tipo List<Personaje>.
+
             return contrincantes;
         }
 
@@ -236,7 +237,7 @@ namespace Seleccion
         {
             Console.SetCursorPosition(0, 3); // Posiciono el mouse debajo del título
 
-            int columnas = 3; // Número de columnas
+            int columnas = 3; 
             int filas = (int)Math.Ceiling(disponibles.Count / (double)columnas);
 
             // Calculo el ancho de cada columna

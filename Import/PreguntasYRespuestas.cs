@@ -1,5 +1,4 @@
-using System;
-using System.Collections.Generic;
+using System.Text.Json;
 
 namespace CuantoSabes
 {
@@ -9,14 +8,6 @@ namespace CuantoSabes
         public List<string> Respuestas { get; set; }
         public int RespuestaCorrectaIndex { get; set; } // Índice de la respuesta correcta
 
-        public PreguntasyRespuestas(string pregunta, List<string> respuestas, int respuestaCorrectaIndex)
-        {
-            Pregunta = pregunta;
-            Respuestas = respuestas;
-            RespuestaCorrectaIndex = respuestaCorrectaIndex;
-        }
-
-        // Método para verificar si una respuesta es la correcta
         public bool EsRespuestaCorrecta(int indiceRespuestaElegida)
         {
             return indiceRespuestaElegida == RespuestaCorrectaIndex;
@@ -25,47 +16,28 @@ namespace CuantoSabes
 
     public class CargandoPreguntasYRespuestas
     {
-        // Crear una lista de PreguntasyRespuestas como un campo de clase
         public List<PreguntasyRespuestas> ListaPreguntas;
 
-        // Constructor para inicializar la lista y agregar elementos
-        public CargandoPreguntasYRespuestas()
+        public CargandoPreguntasYRespuestas(string nombreArchivo)
         {
-            ListaPreguntas = new List<PreguntasyRespuestas>
-            {
-                new PreguntasyRespuestas("Como se llama la madre de Goku?", new List<string> { "Gine", "Apple", "Nuts" }, 0), 
-                new PreguntasyRespuestas("Quien mato a Nappa?", new List<string> { "Vegeta", "Goku", "Krillin" }, 0), 
-                new PreguntasyRespuestas("Como se llama la reencarnacion buena de Majin Boo?", new List<string> { "Uub", "Pan", "Bra" }, 0),
-                new PreguntasyRespuestas("Quien mato al padre de Goku?", new List<string> { "Freezer", "Rey Vegeta", "Bills" }, 0), 
-                new PreguntasyRespuestas("Quien muere para que Gohan se transforme en Ssj 2?", new List<string> { "Androide 16", "Krillin", "Piccolo" }, 0),
-                new PreguntasyRespuestas("De las esferas del dragon, cual es el numero de la suerte de Goku?", new List<string> { "7", "2", "4" }, 2), 
-                new PreguntasyRespuestas("Como se llama el dragon en el planeta Namekusei?", new List<string> { "Shenron", "Porunga", "Omega Porunga" }, 1), 
-                new PreguntasyRespuestas("Quien derroto al Androide 19?", new List<string> { "Trunks", "Goku", "Vegeta" }, 2), 
-                new PreguntasyRespuestas("Cuantas veces le cortaron la cola a Gohan?", new List<string> { "1", "2", "Nunca" }, 2), 
-                new PreguntasyRespuestas("Cuál es el seudónimo que utiliza Píccoro para registrarse en el torneo de las artes marciales?", new List<string> { "Majunia", "Daimakú", "Ninguno" }, 0), 
-                new PreguntasyRespuestas("Quien secuestra a Gohan?", new List<string> { "Raditz", "Cell", "Vegeta" }, 0), 
-                new PreguntasyRespuestas("Cuantas veces muere Goku?", new List<string> { "1", "2", "3" }, 1), 
-                new PreguntasyRespuestas("Como se llama la nieta de Goku y Milk?", new List<string> { "Asta", "Pan", "Apu" }, 1), 
-                new PreguntasyRespuestas("Como se llama el maestro ermitanio que vive en una torre?", new List<string> { "Maestro Karin", "Kamisama", "Gran Patriarca" }, 0), 
-                new PreguntasyRespuestas("De quien es la tecnica Kikoho?", new List<string> { "Krillin", "Yamcha", "Tenshinhan" }, 2),
-                new PreguntasyRespuestas("Cuantos capitulos tiene Dragon Ball Z?", new List<string> { "194", "290", "291" }, 2), 
-                new PreguntasyRespuestas("Cuantas transformaciones tiene Majin Buu, contando su reencarnacion?", new List<string> { "7", "5", "9" }, 2), 
-                new PreguntasyRespuestas("Que es lo que mas teme Goku?", new List<string> { "Milk", "Inyecciones", "Broly" }, 1), 
-                new PreguntasyRespuestas("Cual es la unica tecnica propia de Goku?", new List<string> { "Genkidama", "Kamehameha", "Punio de Dragon" }, 2), 
-                new PreguntasyRespuestas("Quien le dio la espada a Trunks?", new List<string> { "Tapion", "Vegeta", "Goten" }, 0), 
-                new PreguntasyRespuestas("Cuantos anios tenia Gohan cuando Piccoro lo llevo a entrenar?", new List<string> { "4", "5", "6" }, 0), 
-                new PreguntasyRespuestas("Cual de todos los villanos no mato a Krillin?", new List<string> { "Freezer", "Cell", "Majin Buu" }, 1), 
-                new PreguntasyRespuestas("Cuanto tiempo tardo el Maestro Roshi en perfeccionar el Kamehameha?", new List<string> { "50 anios", "3 meses", "30 anios" }, 0), 
-                new PreguntasyRespuestas("Quien derrota a Cell?", new List<string> { "Goku", "Gohan", "Vegeta" }, 1), 
-                new PreguntasyRespuestas("Cual de los siguientes personajes es el amigo de Buu?", new List<string> { "Mr Satan", "Babidi", "Goten" }, 0), 
-                new PreguntasyRespuestas("Que usan los guerreros z para recuperar su fuerza?", new List<string> { "Semilla del ermitanio", "Medicina", "Agua" }, 0), 
-                new PreguntasyRespuestas("Quien destruye el planeta Vegeta?", new List<string> { "Turles", "Freezer", "Bills" }, 1)  
-            };
+            ListaPreguntas = CargarPreguntasDesdeJson(nombreArchivo);
         }
 
-        // Método para obtener una pregunta aleatoriamente de la lista
+        private List<PreguntasyRespuestas> CargarPreguntasDesdeJson(string nombreArchivo)
+        {
+            var jsonData = File.ReadAllText(nombreArchivo);
+            return JsonSerializer.Deserialize<List<PreguntasyRespuestas>>(jsonData);
+        }
+
         public PreguntasyRespuestas ObtenerPreguntaAleatoria()
         {
+            if (ListaPreguntas == null || ListaPreguntas.Count == 0)
+            {
+                Console.WriteLine("La lista de preguntas está vacía o no se ha inicializado correctamente.");
+
+                return null;
+            }
+
             Random random = new Random();
             int index = random.Next(ListaPreguntas.Count); // Genero un número aleatorio entre 0 y el tamaño de la lista
             return ListaPreguntas[index];
@@ -76,16 +48,42 @@ namespace CuantoSabes
     {
         public static bool MostrarResultadosPreguntas()
         {
+            string nombreArchivo = "Json/Preguntas.json";
+
+            if (!File.Exists(nombreArchivo))
+            {
+                Console.WriteLine("El archivo de preguntas no existe.");
+                return false;
+            }
+
             // Creo una instancia de CargandoPreguntasYRespuestas
-            CargandoPreguntasYRespuestas cargador = new CargandoPreguntasYRespuestas();
+            CargandoPreguntasYRespuestas cargador;
+            try
+            {
+                cargador = new CargandoPreguntasYRespuestas(nombreArchivo);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al cargar las preguntas desde el archivo JSON: {ex.Message}");
+                return false;
+            }
 
             // Obtengo una pregunta aleatoria
-            PreguntasyRespuestas preguntaAleatoria = cargador.ObtenerPreguntaAleatoria();
+            PreguntasyRespuestas preguntaAleatoria;
+            try
+            {
+                preguntaAleatoria = cargador.ObtenerPreguntaAleatoria();
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
 
             // Muestro la pregunta aleatoria
             Console.WriteLine(preguntaAleatoria.Pregunta);
 
-            // Muestro respuestas en el orden original sin mezclar
+            // Muestro respuestas
             for (int i = 0; i < preguntaAleatoria.Respuestas.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {preguntaAleatoria.Respuestas[i]}");
