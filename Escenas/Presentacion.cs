@@ -1,4 +1,5 @@
 using Historial;
+using Intro;
 using Personajes;
 
 namespace Presentacion
@@ -44,6 +45,8 @@ namespace Presentacion
 
         public static void InicioJuego()
         {
+            PresentacionJuego.Presentacion();
+
             int mensajeNumero = 0;
             List<HistorialGanadores> listado = new List<HistorialGanadores>();
 
