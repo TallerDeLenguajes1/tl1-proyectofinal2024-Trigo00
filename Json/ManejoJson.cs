@@ -24,12 +24,5 @@ namespace ManejoJson
             }
 
         }
-
-        //No uso esta funcion pero la tengo porque debo hacerla
-        public static List<Personaje> LeerPersonajes(string nombreArchivo)
-        {
-            string dev = File.ReadAllText(nombreArchivo);
-            return JsonSerializer.Deserialize<List<Personaje>>(dev);
-        }
     }
 }

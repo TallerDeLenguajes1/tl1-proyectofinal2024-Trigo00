@@ -26,6 +26,7 @@ namespace FabricaPersonajes
             //Datos
             nuevoPersonaje.Datos.Nombre = personaje.Name;
             nuevoPersonaje.Datos.Raza = personaje.Race;
+
             switch (personaje.Gender)
             {
                 case "Male":
@@ -35,7 +36,13 @@ namespace FabricaPersonajes
                     nuevoPersonaje.Datos.Genero = "Femenino";
                     break;
             }
-            nuevoPersonaje.Datos.Ki = personaje.Ki;
+
+            if(personaje.Ki == "unknown"){
+                nuevoPersonaje.Datos.Ki = "Desconocido";
+            }else{
+                nuevoPersonaje.Datos.Ki = personaje.Ki;
+            }
+            
             nuevoPersonaje.Datos.Descripcion = personaje.Description;
 
             //Caracteristicas

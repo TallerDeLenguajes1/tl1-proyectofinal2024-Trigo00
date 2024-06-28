@@ -1,5 +1,7 @@
 using Animaciones;
+using Cruces;
 using Historial;
+using Info;
 using Personajes;
 using Presentacion;
 
@@ -21,6 +23,7 @@ namespace MenuPrincipal
             string[] opciones = {
                 "Jugar",
                 "Historial de Campeones",
+                "Informacion de Jugadores",
                 "Salir"
             };
 
@@ -113,13 +116,17 @@ namespace MenuPrincipal
                                 List<Personaje> listaPersonajesTorneo = LuchadoresTorneo.Torneo.ObtenerListaPeleadores();
                                 Juego.AparicionParaMostrarParticipantes(listaPersonajesTorneo);
                                 Juego.AparicionParaSorteo();
-                                Cruces.Peleas.mostrarCruces(listaPersonajesTorneo, listado);
+                                Peleas.mostrarCruces(listaPersonajesTorneo, listado);
                                 break;
                             case 1:
                                 // Lógica para "Historial de Campeones"
                                 HistorialGanadores.mostrarListado(listado);
                                 break;
                             case 2:
+                                // Lógica para "Informacion de jugadores"
+                                InfoPlayers.MostrarInformacionPersonajes(listado);
+                                break;
+                            case 3:
                                 // Lógica para "Salir"
                                 Console.WriteLine("Saliendo del programa...");
                                 Thread.Sleep(3000); 
