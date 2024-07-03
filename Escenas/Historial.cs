@@ -27,7 +27,7 @@ namespace Historial
             {
                 foreach (var ganador in listado)
                 {
-                    AnimacionDeCarga();
+                    Animaciones.misAnimaciones.AnimacionDeCargaHistorial();
                     Console.WriteLine("\r" + ganador.Hora + ": " + ganador.Ganador.Datos.Nombre);
                 }
             }
@@ -47,14 +47,7 @@ namespace Historial
             Hora = hora;
         }
 
-        private static void AnimacionDeCarga()
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                Console.Write("\rCargando " + new string('-', i % 4) + new string(' ', 3 - (i % 4)));
-                Thread.Sleep(100);
-            }
-        }
+        
     }
 
 

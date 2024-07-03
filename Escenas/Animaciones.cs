@@ -18,6 +18,15 @@ namespace Animaciones
             Console.Clear();
             MostrarMensajeConCarga("Regresando al Menu Principal...");
         }
+        
+        public static void AnimacionDeCargaHistorial()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("\rCargando " + new string('-', i % 4) + new string(' ', 3 - (i % 4)));
+                Thread.Sleep(100);
+            }
+        }
 
         private static void MostrarMensajeConCarga(string mensaje)
         {
@@ -38,5 +47,6 @@ namespace Animaciones
                 Thread.Sleep(50); // Pausa de 50ms entre cada incremento
             }
         }
+
     }
 }

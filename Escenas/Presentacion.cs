@@ -145,7 +145,7 @@ namespace Presentacion
                 else
                 {
                     mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
-                    Thread.Sleep(4000); 
+                    Thread.Sleep(4000);
                 }
             }
         }
@@ -208,7 +208,7 @@ namespace Presentacion
                     cont++;
                 }
             }
-            Thread.Sleep(4000); 
+            Thread.Sleep(4000);
         }
 
         public static void AparicionParaSorteo()
