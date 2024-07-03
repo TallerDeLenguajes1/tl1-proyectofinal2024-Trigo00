@@ -162,6 +162,21 @@ namespace AparicionesPuar
             }
             Console.Clear();
         }
+        public static void AparicionCuandoNoQuiereJugar()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            int mensajeNumero = 0;
+            List<string> mensajes = new List<string>();
+
+            mensajes.Add("Aún no estás listo, por lo visto");
+            mensajes.Add("Vuelve cuando estés preparado, estaré esperándote");
+
+            for (int i = 0; i < mensajes.Count; i++)
+            {
+                mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
+            }
+            Console.Clear();
+        }
 
         public static void MostrarPuar()
         {
@@ -190,28 +205,13 @@ namespace AparicionesPuar
             Console.WriteLine("            .-.           .-'.    ");
             Console.WriteLine("           /   .\"*--+g+--*\".   \\   ");
             Console.WriteLine("          :   /     $$$     \\   ;  ");
-            Console.WriteLine("           --'     $$$       '--  ");
+            Console.WriteLine("           --'      $$$      '--  ");
             Console.WriteLine("                    :$$;           ");
             Console.WriteLine("                     :$$           ");
             Console.WriteLine("                     'T$bg+.____   ");
             Console.WriteLine("                       'T$$$$$  :  ");
             Console.WriteLine("                           \"**--'  ");
 
-        }
-        public static void AparicionCuandoNoQuiereJugar()
-        {
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            int mensajeNumero = 0;
-            List<string> mensajes = new List<string>();
-
-            mensajes.Add("Aún no estás listo, por lo visto");
-            mensajes.Add("Vuelve cuando estés preparado, estaré esperándote");
-
-            for (int i = 0; i < mensajes.Count; i++)
-            {
-                mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
-            }
-            Console.Clear();
         }
 
         private static int MostrarMensajesPuar(int mensajeNumero, List<string> mensajes)
@@ -251,20 +251,23 @@ namespace AparicionesPuar
 
             Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
 
-            // Comienza la espera para la tecla o el tiempo de espera
+            Console.SetCursorPosition(Console.WindowWidth - 40, Console.WindowHeight - 2);
+            Console.WriteLine("Ingrese S si desea saltar la cinemática");
+
+            // Esto espera que se ingrese la tecla
             DateTime endTime = DateTime.Now.AddSeconds(4);
             while (DateTime.Now < endTime)
             {
                 if (Console.KeyAvailable)
                 {
                     var key = Console.ReadKey(true).Key;
-                    if (key == ConsoleKey.S) // Si presiono 'S', avanzo rapido
+                    if (key == ConsoleKey.S) // Si presiono 'S', avanzo rápidamente
                     {
                         mensajeNumero = mensajes.Count; // Salto al final de la lista de mensajes
                         break;
                     }
                 }
-                Thread.Sleep(100); // Debo hacer una pequeña espera para asi evitar uso intensivo de la CPU
+                Thread.Sleep(100); // Hago una pequeña espera por el tema que no quiero sobreexigir al CPU
             }
 
             Console.Clear();
@@ -272,5 +275,6 @@ namespace AparicionesPuar
             // Llama recursivamente para el siguiente mensaje
             return mensajeNumero + 1;
         }
+
     }
 }
