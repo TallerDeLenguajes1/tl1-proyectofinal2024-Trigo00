@@ -1,10 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Text.Json;
 using Historial;
 using MenuPrincipal;
-using Personajes; // Asegúrate de tener la referencia correcta al espacio de nombres de tus clases
+using Personajes;
 
 namespace Info
 {

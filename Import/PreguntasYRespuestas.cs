@@ -39,7 +39,7 @@ namespace CuantoSabes
             }
 
             Random random = new Random();
-            int index = random.Next(ListaPreguntas.Count); // Genero un número aleatorio entre 0 y el tamaño de la lista
+            int index = random.Next(ListaPreguntas.Count); 
             return ListaPreguntas[index];
         }
     }
@@ -58,27 +58,12 @@ namespace CuantoSabes
 
             // Creo una instancia de CargandoPreguntasYRespuestas
             CargandoPreguntasYRespuestas cargador;
-            try
-            {
-                cargador = new CargandoPreguntasYRespuestas(nombreArchivo);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error al cargar las preguntas desde el archivo JSON: {ex.Message}");
-                return false;
-            }
+            cargador = new CargandoPreguntasYRespuestas(nombreArchivo);
 
             // Obtengo una pregunta aleatoria
             PreguntasyRespuestas preguntaAleatoria;
-            try
-            {
-                preguntaAleatoria = cargador.ObtenerPreguntaAleatoria();
-            }
-            catch (InvalidOperationException ex)
-            {
-                Console.WriteLine(ex.Message);
-                return false;
-            }
+            preguntaAleatoria = cargador.ObtenerPreguntaAleatoria();
+            
 
             // Muestro la pregunta aleatoria
             Console.WriteLine(preguntaAleatoria.Pregunta);
@@ -86,16 +71,16 @@ namespace CuantoSabes
             // Muestro respuestas
             for (int i = 0; i < preguntaAleatoria.Respuestas.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {preguntaAleatoria.Respuestas[i]}");
+                Console.WriteLine($"{i + 1}) {preguntaAleatoria.Respuestas[i]}");
             }
 
-            // Solicito al usuario que elija una respuesta
+    
             Console.Write("Elige una respuesta (1-3): ");
             int opcionElegida;
             while (!int.TryParse(Console.ReadLine(), out opcionElegida) || opcionElegida < 1 || opcionElegida > preguntaAleatoria.Respuestas.Count)
             {
                 Console.WriteLine($"Opción inválida. Debes elegir una respuesta válida (1-{preguntaAleatoria.Respuestas.Count}).");
-                Console.Write("Elige una respuesta (1-3): ");
+                Console.Write("Elige una respuesta: ");
             }
 
             // Valido la opción elegida

@@ -7,7 +7,6 @@ namespace ManejoJson
     {
         public static void GenerarJsonPersonajes(List<Personaje> misPersonajes, string nombreArchivo)
         {
-            // Creo el archivo si no existe
             if (!File.Exists(nombreArchivo))
             {
                 var opciones = new JsonSerializerOptions

@@ -165,8 +165,8 @@ namespace Cruces
 
                 if (pelea.Item1 == personajeUsuario)
                 {
-                    PeleaUsuario.contadorPelea();
                     // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
+                    PeleaUsuario.contadorPelea();
                     ganador = PeleaUsuario.peleaPersonaje(pelea.Item1, pelea.Item2);
                     if (ganador != personajeUsuario)
                     {
@@ -184,8 +184,8 @@ namespace Cruces
                 {
                     if (pelea.Item2 == personajeUsuario)
                     {
-                        PeleaUsuario.contadorPelea();
                         // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
+                        PeleaUsuario.contadorPelea();
                         ganador = PeleaUsuario.peleaPersonaje(pelea.Item2, pelea.Item1);
                         if (ganador != personajeUsuario)
                         {

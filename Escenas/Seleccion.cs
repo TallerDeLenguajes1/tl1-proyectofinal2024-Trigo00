@@ -79,7 +79,7 @@ namespace Seleccion
             }
         }
 
-        public static List<Personaje> MostrarMenuContrincantes(List<Personaje> listaPersonajes, Personaje personajePrincipal)
+        public static List<Personaje> ElegirModoYMostrarMenuContrincantes(List<Personaje> listaPersonajes, Personaje personajePrincipal)
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkYellow;

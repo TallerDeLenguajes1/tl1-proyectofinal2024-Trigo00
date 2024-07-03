@@ -1,5 +1,6 @@
 using Historial;
 using Intro;
+using MenuPrincipal;
 using Personajes;
 
 namespace Presentacion
@@ -34,7 +35,7 @@ namespace Presentacion
             Console.WriteLine("            .-.           .-'.    ");
             Console.WriteLine("           /   .\"*--+g+--*\".   \\   ");
             Console.WriteLine("          :   /     $$$     \\   ;  ");
-            Console.WriteLine("          --'      $$$      --'  ");
+            Console.WriteLine("           --'     $$$       '--  ");
             Console.WriteLine("                    :$$;           ");
             Console.WriteLine("                     :$$           ");
             Console.WriteLine("                     'T$bg+.____   ");
@@ -127,11 +128,10 @@ namespace Presentacion
                                 break;
                             case ConsoleKey.Enter:
                                 Console.Clear();
-                                // Muestro el mouse nuevamente antes de salir del método
                                 Console.CursorVisible = true;
                                 if (opciones[seleccionIndex] == "Si")
                                 {
-                                    MenuPrincipal.Menu.MostrarOpciones(listado);
+                                    Menu.MostrarOpciones(listado);
                                 }
                                 else
                                 {
