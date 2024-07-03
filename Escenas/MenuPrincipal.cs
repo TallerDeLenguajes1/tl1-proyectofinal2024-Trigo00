@@ -10,7 +10,7 @@ namespace MenuPrincipal
 {
     public class Menu
     {
-        public static void MostrarOpciones(List<HistorialGanadores> listado)
+        public static void MostrarMenuPrincipal(List<HistorialGanadores> listado)
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             string asciiArt = @"

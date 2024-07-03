@@ -255,8 +255,8 @@ namespace AparicionesPuar
             Console.WriteLine("Ingrese S si desea saltar la cinemática");
 
             // Esto espera que se ingrese la tecla
-            DateTime endTime = DateTime.Now.AddSeconds(4);
-            while (DateTime.Now < endTime)
+            DateTime fin = DateTime.Now.AddSeconds(4);
+            while (DateTime.Now < fin)
             {
                 if (Console.KeyAvailable)
                 {
@@ -272,7 +272,7 @@ namespace AparicionesPuar
 
             Console.Clear();
 
-            // Llama recursivamente para el siguiente mensaje
+            // Llamo recursivamente para el siguiente mensaje
             return mensajeNumero + 1;
         }
 

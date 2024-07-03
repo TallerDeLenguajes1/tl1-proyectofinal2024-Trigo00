@@ -56,7 +56,7 @@ namespace Cruces
             misAnimaciones.AnimacionRegresarAMenu();
             Console.Clear();
             HistorialGanadores.CargarHistorial(ganadorFinales[0], listado);
-            Menu.MostrarOpciones(listado);
+            Menu.MostrarMenuPrincipal(listado);
         }
 
         private static void Mezclar(List<Personaje> lista, Random rng)

@@ -8,6 +8,7 @@ namespace Historial
     {
         public Personaje Ganador { get; set; }
         public DateTime Hora { get; set; }
+
         private static string nombreArchivo = "Json/Historial.json";
 
         public static void CargarHistorial(Personaje PersonajeGanador, List<HistorialGanadores> listaHistorial)
@@ -40,7 +41,18 @@ namespace Historial
             Console.WriteLine(frase);
             Console.CursorVisible = false;
             Console.ReadKey(true);
-            Menu.MostrarOpciones(listado);
+            Menu.MostrarMenuPrincipal(listado);
+        }
+
+        public static List<HistorialGanadores> CargarHistorialDesdeArchivo()
+        {
+            if (!File.Exists(nombreArchivo))
+            {
+                return new List<HistorialGanadores>();
+            }
+
+            string json = File.ReadAllText(nombreArchivo);
+            return JsonSerializer.Deserialize<List<HistorialGanadores>>(json);
         }
 
         private static void GuardarHistorial(List<HistorialGanadores> listaHistorial)
@@ -55,26 +67,15 @@ namespace Historial
             File.WriteAllText(nombreArchivo, json);
         }
 
-        public static List<HistorialGanadores> CargarHistorialDesdeArchivo()
-        {
-            if (!File.Exists(nombreArchivo))
-            {
-                return new List<HistorialGanadores>();
-            }
-
-            string json = File.ReadAllText(nombreArchivo);
-            return JsonSerializer.Deserialize<List<HistorialGanadores>>(json);
-        }
-
-        private HistorialGanadores(Personaje ganador, DateTime hora)
+        // Constructor
+        public HistorialGanadores(Personaje ganador, DateTime hora)
         {
             Ganador = ganador;
             Hora = hora;
         }
 
-        // Constructor
-        public HistorialGanadores()
-        {
-        }
+        // public HistorialGanadores()
+        // {
+        // }
     }
 }

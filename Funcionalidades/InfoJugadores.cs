@@ -27,7 +27,7 @@ namespace Info
             Console.CursorVisible = false;
             Console.ReadKey(true);
             Console.Clear();
-            Menu.MostrarOpciones(listado);
+            Menu.MostrarMenuPrincipal(listado);
         }
 
         private static void MostrarInformacionPersonaje(Personaje pj)

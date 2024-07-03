@@ -98,7 +98,7 @@ namespace Presentacion
                                 Console.CursorVisible = true;
                                 if (opciones[seleccionIndex] == "Si")
                                 {
-                                    Menu.MostrarOpciones(listado);
+                                    Menu.MostrarMenuPrincipal(listado);
                                 }
                                 else
                                 {
