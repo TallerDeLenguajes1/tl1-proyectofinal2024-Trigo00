@@ -1,23 +1,26 @@
 using Personajes;
+using System;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace AparicionesPuar
 {
     public class ApPuar
     {
-
         public static void AparicionParaElegirPersonaje()
         {
             int mensajeNumero = 0;
 
             List<string> mensajes = new List<string>();
 
-            mensajes.Add("Muy bien, comencemos por elegir el personaje que usaras para los combates");
-            mensajes.Add("Recuerda que al elegir un personaje, no podras elegir otro.");
+            mensajes.Add("Muy bien, comencemos por elegir el personaje que usarás para los combates");
+            mensajes.Add("Recuerda que al elegir un personaje, no podrás elegir otro.");
 
             for (int i = 0; i < mensajes.Count; i++)
             {
                 mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
             }
+            Console.Clear();
         }
 
         public static void ExplicacionEleccionOponentes()
@@ -26,17 +29,17 @@ namespace AparicionesPuar
 
             List<string> mensajes = new List<string>();
 
-            mensajes.Add("Ahora tendras que elegir como te gustaria que sea la seleccion de tus oponentes");
-            mensajes.Add("Si eliges de manera aleatoria, se cargaran todos tus oponentes aleatoriamente y automaticamente");
+            mensajes.Add("Ahora tendrás que elegir cómo te gustaría que sea la selección de tus oponentes");
+            mensajes.Add("Si eliges de manera aleatoria, se cargarán todos tus oponentes aleatoriamente y automáticamente");
             mensajes.Add("En cambio");
-            mensajes.Add("Si eliges de manera manual, tendras que elegir 15 oponentes que quieras que participen del torneo");
-            mensajes.Add("Tu eliges...");
-
+            mensajes.Add("Si eliges de manera manual, tendrás que elegir 15 oponentes que quieras que participen del torneo");
+            mensajes.Add("Tú eliges...");
 
             for (int i = 0; i < mensajes.Count; i++)
             {
                 mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
             }
+            Console.Clear();
         }
 
         public static void AparicionParaMostrarParticipantes(List<Personaje> lista)
@@ -52,14 +55,15 @@ namespace AparicionesPuar
             for (int i = 0; i < mensajes.Count; i++)
             {
                 mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
+                Console.Clear();
 
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("Lista de participantes");
                 Console.WriteLine();
                 int cont = 1;
-                foreach (var participantes in lista)
+                foreach (var participante in lista)
                 {
-                    Console.WriteLine(cont + ": " + participantes.Datos.Nombre);
+                    Console.WriteLine(cont + ": " + participante.Datos.Nombre);
                     cont++;
                 }
             }
@@ -72,8 +76,8 @@ namespace AparicionesPuar
             int mensajeNumero = 0;
             List<string> mensajes = new List<string>();
 
-            mensajes.Add("Ahora se hara el sorteo de los enfrentamientos");
-            mensajes.Add("Espero tengas buena suerte");
+            mensajes.Add("Ahora se hará el sorteo de los enfrentamientos");
+            mensajes.Add("Espero que tengas buena suerte");
             mensajes.Add("...");
             mensajes.Add("Muy bien, estos son los enfrentamientos");
 
@@ -81,6 +85,7 @@ namespace AparicionesPuar
             {
                 mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
             }
+            Console.Clear();
         }
 
         public static void ExplicacionSobreCombates()
@@ -89,19 +94,20 @@ namespace AparicionesPuar
             int mensajeNumero = 0;
             List<string> mensajes = new List<string>();
 
-            mensajes.Add("Los combates se haran de manera simultanea");
-            mensajes.Add("Por lo tanto, no podras observar a los demas pelear");
+            mensajes.Add("Los combates se realizarán de manera simultánea");
+            mensajes.Add("Por lo tanto, no podrás observar a los demás pelear");
             mensajes.Add("...");
-            mensajes.Add("Hare algo que no deberia, pero Yamcha siempre me dice que debo ayudar a mis amigos");
-            mensajes.Add("Asi que te dare ataques y defensas especiales, pero no se lo digas a nadie");
-            mensajes.Add("Lo que debes hacer es simple, responde bien las preguntas y obtendras beneficios");
-            mensajes.Add("Si atacas y respondes bien, tu ataque será potenciado, de lo contrario, no recibes nada");
-            mensajes.Add("Si te defiendes y respondes bien, obtendras mayor resistencia. Y en caso de errar, no recibiras nada");
+            mensajes.Add("Haré algo que no debería, pero Yamcha siempre me dice que debo ayudar a mis amigos");
+            mensajes.Add("Así que te daré ataques y defensas especiales, pero no se lo digas a nadie");
+            mensajes.Add("Lo que debes hacer es simple: responde bien las preguntas y obtendrás beneficios");
+            mensajes.Add("Si atacas y respondes bien, tu ataque será potenciado; de lo contrario, no recibirás nada");
+            mensajes.Add("Si te defiendes y respondes bien, obtendrás mayor resistencia. En caso de error, no recibirás nada");
 
             for (int i = 0; i < mensajes.Count; i++)
             {
                 mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
             }
+            Console.Clear();
         }
 
         public static void AparicionCuandoPerdesCombate()
@@ -118,6 +124,7 @@ namespace AparicionesPuar
             {
                 mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
             }
+            Console.Clear();
         }
 
         public static void AparicionCuandoGanasCombate()
@@ -126,14 +133,15 @@ namespace AparicionesPuar
             int mensajeNumero = 0;
             List<string> mensajes = new List<string>();
 
-            mensajes.Add("Felicidades, estuviste increible");
-            mensajes.Add("Como premio por tu esfuerzo, recibiste un incremento de tus estadisticas");
-            mensajes.Add("Aprovechalas");
+            mensajes.Add("¡Felicidades, estuviste increíble!");
+            mensajes.Add("Como premio por tu esfuerzo, recibiste un incremento en tus estadísticas");
+            mensajes.Add("Aprovéchalas");
 
             for (int i = 0; i < mensajes.Count; i++)
             {
                 mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
             }
+            Console.Clear();
         }
 
 
@@ -144,14 +152,15 @@ namespace AparicionesPuar
             int mensajeNumero = 0;
             List<string> mensajes = new List<string>();
 
-            mensajes.Add("¡Felicidades!, ganaste el Torneo");
-            mensajes.Add("Siempre confie en ti");
-            mensajes.Add("Ahora formaras parte del salon de campeones");
+            mensajes.Add("¡Felicidades, ganaste el Torneo!");
+            mensajes.Add("Siempre confié en ti");
+            mensajes.Add("Ahora formarás parte del salón de campeones");
 
             for (int i = 0; i < mensajes.Count; i++)
             {
                 mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
             }
+            Console.Clear();
         }
 
         public static void MostrarPuar()
@@ -195,13 +204,14 @@ namespace AparicionesPuar
             int mensajeNumero = 0;
             List<string> mensajes = new List<string>();
 
-            mensajes.Add("Aun no estas listo por lo visto");
-            mensajes.Add("Vuelve cuando estes preparado, te estare esperando");
+            mensajes.Add("Aún no estás listo, por lo visto");
+            mensajes.Add("Vuelve cuando estés preparado, estaré esperándote");
 
             for (int i = 0; i < mensajes.Count; i++)
             {
                 mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
             }
+            Console.Clear();
         }
 
         private static int MostrarMensajesPuar(int mensajeNumero, List<string> mensajes)
@@ -221,6 +231,12 @@ namespace AparicionesPuar
             // Obtengo el tamaño de la ventana de la consola
             int windowHeight = Console.WindowHeight;
 
+            // Si el mensajeNumero es mayor o igual que la cantidad de mensajes, termino la función
+            if (mensajeNumero >= mensajes.Count)
+            {
+                return mensajeNumero;
+            }
+
             // Cuento el número de líneas en el texto
             int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
 
@@ -234,11 +250,27 @@ namespace AparicionesPuar
             }
 
             Console.WriteLine("         ^T$$     :\"---\";    $$P^'      " + mensajes[mensajeNumero]);
-            mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
-            Thread.Sleep(4000);
+
+            // Comienza la espera para la tecla o el tiempo de espera
+            DateTime endTime = DateTime.Now.AddSeconds(4);
+            while (DateTime.Now < endTime)
+            {
+                if (Console.KeyAvailable)
+                {
+                    var key = Console.ReadKey(true).Key;
+                    if (key == ConsoleKey.S) // Si presiono 'S', avanzo rapido
+                    {
+                        mensajeNumero = mensajes.Count; // Salto al final de la lista de mensajes
+                        break;
+                    }
+                }
+                Thread.Sleep(100); // Debo hacer una pequeña espera para asi evitar uso intensivo de la CPU
+            }
+
             Console.Clear();
 
-            return mensajeNumero;
+            // Llama recursivamente para el siguiente mensaje
+            return mensajeNumero + 1;
         }
     }
 }

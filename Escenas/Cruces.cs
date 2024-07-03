@@ -179,6 +179,7 @@ namespace Cruces
                     {
                         ApPuar.AparicionAlGanarTorneo();
                     }
+
                 }
                 else
                 {
@@ -198,6 +199,7 @@ namespace Cruces
                         {
                             ApPuar.AparicionAlGanarTorneo();
                         }
+
                     }
                     else
                     {
