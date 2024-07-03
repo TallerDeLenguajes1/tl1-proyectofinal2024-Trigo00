@@ -7,7 +7,8 @@ namespace Intro
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             
             string[] logo = 
-            {
+            {   "",
+                "",
                 " ___  ___    _   ___  ___  _  _ ___   _   _    _      ____",
                 "|   \\| _ \\  /_\\ / __|/ _ \\| \\| | _ ) /_\\ | |  | |    |_  /",
                 "| |) |   / / _ \\ (_ | (_) | .` | _ \\/ _ \\| |__| |__   / / ",
