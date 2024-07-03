@@ -1,6 +1,6 @@
 using System.Text.Json;
+using AparicionesPuar;
 using Personajes;
-using Presentacion;
 using Seleccion;
 
 namespace LuchadoresTorneo
@@ -13,11 +13,11 @@ namespace LuchadoresTorneo
             string jsonData = File.ReadAllText("Json/Personajes.json");
             List<Personaje> personajes = JsonSerializer.Deserialize<List<Personaje>>(jsonData);
 
-            Juego.AparicionParaElegirPersonaje();
+            ApPuar.AparicionParaElegirPersonaje();
 
             Personaje personajeSeleccionado = SeleccionUsuario.SeleccionPersonaje(personajes);
 
-            Juego.ExplicacionEleccionOponentes();
+            ApPuar.ExplicacionEleccionOponentes();
 
             List<Personaje> listaPersonajesSeleccionados = SeleccionUsuario.ElegirModoYMostrarMenuContrincantes(personajes, personajeSeleccionado);
 

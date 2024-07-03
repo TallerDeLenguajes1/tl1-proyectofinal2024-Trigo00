@@ -1,10 +1,10 @@
 using Animaciones;
+using AparicionesPuar;
 using Cruces;
 using Historial;
 using Info;
 using LuchadoresTorneo;
 using Personajes;
-using Presentacion;
 
 namespace MenuPrincipal
 {
@@ -115,8 +115,8 @@ namespace MenuPrincipal
                                 misAnimaciones.AnimacionCargaDeJuego();
                                 Console.Clear();
                                 List<Personaje> listaPersonajesTorneo = Torneo.ObtenerListaPeleadores();
-                                Juego.AparicionParaMostrarParticipantes(listaPersonajesTorneo);
-                                Juego.AparicionParaSorteo();
+                                ApPuar.AparicionParaMostrarParticipantes(listaPersonajesTorneo);
+                                ApPuar.AparicionParaSorteo();
                                 Peleas.MostrarCruces(listaPersonajesTorneo, listado);
                                 break;
                             case 1:

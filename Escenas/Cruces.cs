@@ -3,7 +3,7 @@ using Historial;
 using MenuPrincipal;
 using Animaciones;
 using Pelea;
-using Presentacion;
+using AparicionesPuar;
 
 namespace Cruces
 {
@@ -22,7 +22,7 @@ namespace Cruces
             MostrarCrucesDeRonda("Octavos de Final", lista);
             // Simulo y muestro los cruces de cuartos de final
             List<Tuple<Personaje, Personaje>> crucesOctavos = GenerarCruces(lista);
-            Juego.ExplicacionSobreCombates();
+            ApPuar.ExplicacionSobreCombates();
             if(VerificarSiEstoy(crucesOctavos, personajePrincipal)){
                 misAnimaciones.AnimacionCargaDePelea();
             }
@@ -141,7 +141,7 @@ namespace Cruces
                 Console.WriteLine("¡Perdiste!");
                 Thread.Sleep(3000);
                 Console.Clear();
-                Juego.AparicionCuandoPerdesCombate();
+                ApPuar.AparicionCuandoPerdesCombate();
 
             }
             else
@@ -149,7 +149,7 @@ namespace Cruces
                 Console.WriteLine("¡Ganaste!, avanzas a la siguiente ronda.");
                 Thread.Sleep(3000);
                 Console.Clear();
-                Juego.AparicionCuandoGanasCombate();
+                ApPuar.AparicionCuandoGanasCombate();
             }
         }
 
@@ -173,11 +173,11 @@ namespace Cruces
                         Console.WriteLine("¡Perdiste!");
                         Thread.Sleep(3000);
                         Console.Clear();
-                        Juego.AparicionCuandoPerdesCombate();
+                        ApPuar.AparicionCuandoPerdesCombate();
                     }
                     else
                     {
-                        Juego.AparicionAlGanarTorneo();
+                        ApPuar.AparicionAlGanarTorneo();
                     }
                 }
                 else
@@ -192,11 +192,11 @@ namespace Cruces
                             Console.WriteLine("¡Perdiste!");
                             Thread.Sleep(3000);
                             Console.Clear();
-                            Juego.AparicionCuandoPerdesCombate();
+                            ApPuar.AparicionCuandoPerdesCombate();
                         }
                         else
                         {
-                            Juego.AparicionAlGanarTorneo();
+                            ApPuar.AparicionAlGanarTorneo();
                         }
                     }
                     else
