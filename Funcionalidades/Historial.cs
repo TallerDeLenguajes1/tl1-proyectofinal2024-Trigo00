@@ -1,3 +1,4 @@
+using System.Text.Json;
 using MenuPrincipal;
 using Personajes;
 
@@ -5,16 +6,18 @@ namespace Historial
 {
     public class HistorialGanadores
     {
-
         public Personaje Ganador { get; set; }
         public DateTime Hora { get; set; }
+        private static string nombreArchivo = "Json/Historial.json";
 
         public static void CargarHistorial(Personaje PersonajeGanador, List<HistorialGanadores> listaHistorial)
         {
             DateTime horaActual = DateTime.Now;
             HistorialGanadores datos = new HistorialGanadores(PersonajeGanador, horaActual);
             listaHistorial.Add(datos);
+            GuardarHistorial(listaHistorial);
         }
+
         public static void MostrarListado(List<HistorialGanadores> listado)
         {
             Console.WriteLine("GANADORES DEL TORNEO");
@@ -32,7 +35,6 @@ namespace Historial
                 }
             }
 
-
             Console.WriteLine();
             string frase = "Pulse una tecla regresar al menu...";
             Console.WriteLine(frase);
@@ -41,14 +43,38 @@ namespace Historial
             Menu.MostrarOpciones(listado);
         }
 
+        private static void GuardarHistorial(List<HistorialGanadores> listaHistorial)
+        {
+            var options = new JsonSerializerOptions
+            {
+                Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                WriteIndented = true
+            };
+
+            string json = JsonSerializer.Serialize(listaHistorial, options);
+            File.WriteAllText(nombreArchivo, json);
+        }
+
+        public static List<HistorialGanadores> CargarHistorialDesdeArchivo()
+        {
+            if (!File.Exists(nombreArchivo))
+            {
+                return new List<HistorialGanadores>();
+            }
+
+            string json = File.ReadAllText(nombreArchivo);
+            return JsonSerializer.Deserialize<List<HistorialGanadores>>(json);
+        }
+
         private HistorialGanadores(Personaje ganador, DateTime hora)
         {
             Ganador = ganador;
             Hora = hora;
         }
 
-        
+        // Constructor
+        public HistorialGanadores()
+        {
+        }
     }
-
-
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "Ganador": {
+      "Datos": {
+        "Nombre": "Bills",
+        "Raza": "God",
+        "Genero": "Masculino",
+        "Descripcion": "Dios de la Destrucción Beerus, conocido también como Beers, o Bills en Hispanoamérica e inicialmente en España[1], es un personaje que fue introducido en la película Dragon Ball Z: La batalla de los dioses, donde es el antagonista principal de la película, y que aparece en el manga y anime de Dragon Ball Super como un personaje principal. Ocupa el puesto de Dios de la Destrucción de todo el Universo 7 siendo el lugar donde se desarrolla la historia de Dragon Ball.",
+        "Ki": "102 Billion"
+      },
+      "Caracteristicas": {
+        "Fuerza": 27,
+        "Salud": 100,
+        "Velocidad": 29,
+        "Agilidad": 46,
+        "Resistencia": 64,
+        "Energia": 41
+      }
+    },
+    "Hora": "2024-07-03T15:12:49.2588649-03:00"
+  }
+]

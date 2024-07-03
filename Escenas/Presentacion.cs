@@ -15,7 +15,7 @@ namespace Presentacion
 
             PresentacionJuego.Presentacion();
 
-            List<HistorialGanadores> listado = new List<HistorialGanadores>();
+            List<HistorialGanadores> listado = HistorialGanadores.CargarHistorialDesdeArchivo();
 
             int mensajeNumero = 0;
             List<string> mensajes = new List<string>();
