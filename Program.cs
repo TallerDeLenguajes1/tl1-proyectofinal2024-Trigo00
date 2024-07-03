@@ -1,5 +1,3 @@
-﻿using ArmarJsonPjsConApi;
-using Presentacion;
+﻿using Presentacion;
 
-await CargadorDatos.CargarDatosPersonajesAsync();
-Juego.InicioJuego();
+await Juego.InicioJuego();

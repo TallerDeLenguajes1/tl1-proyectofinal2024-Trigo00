@@ -17,13 +17,18 @@ namespace FabricaPersonajes
             return listaPersonajes;
         }
 
-        private static Random random = new Random();
-
         private static Personaje CreacionPersonaje(PersonajeApi personaje)
         {
             Personaje nuevoPersonaje = new Personaje();
 
-            //Datos
+            AsignoDatos(personaje, nuevoPersonaje);
+            AsignoCaracteristicas(nuevoPersonaje);
+
+            return nuevoPersonaje;
+        }
+
+        private static void AsignoDatos(PersonajeApi personaje, Personaje nuevoPersonaje)
+        {
             nuevoPersonaje.Datos.Nombre = personaje.Name;
             nuevoPersonaje.Datos.Raza = personaje.Race;
 
@@ -37,23 +42,29 @@ namespace FabricaPersonajes
                     break;
             }
 
-            if(personaje.Ki == "unknown"){
+            if (personaje.Ki == "unknown")
+            {
                 nuevoPersonaje.Datos.Ki = "Desconocido";
-            }else{
+            }
+            else
+            {
                 nuevoPersonaje.Datos.Ki = personaje.Ki;
             }
-            
-            nuevoPersonaje.Datos.Descripcion = personaje.Description;
 
-            //Caracteristicas
+            nuevoPersonaje.Datos.Descripcion = personaje.Description;
+        }
+
+        private static void AsignoCaracteristicas(Personaje nuevoPersonaje)
+        {
             nuevoPersonaje.Caracteristicas.Fuerza = random.Next(20, 71);
             nuevoPersonaje.Caracteristicas.Salud = 100;
             nuevoPersonaje.Caracteristicas.Velocidad = random.Next(20, 71);
             nuevoPersonaje.Caracteristicas.Agilidad = random.Next(20, 71);
             nuevoPersonaje.Caracteristicas.Resistencia = random.Next(20, 71);
             nuevoPersonaje.Caracteristicas.Energia = random.Next(20, 71);
-            
-            return nuevoPersonaje;
         }
+
+        private static Random random = new Random();
+
     }
 }

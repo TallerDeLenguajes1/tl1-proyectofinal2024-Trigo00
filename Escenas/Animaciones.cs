@@ -28,6 +28,19 @@ namespace Animaciones
             }
         }
 
+        public static void ContadorPelea()
+        {
+            for (int i = 3; i > 0; i--)
+            {
+                Console.Clear();
+                Console.WriteLine($"La pelea comienza en {i}");
+                Thread.Sleep(1000); 
+            }
+
+            Console.Clear();
+            Console.WriteLine("¡La pelea ha comenzado!");
+        }
+
         private static void MostrarMensajeConCarga(string mensaje)
         {
             Console.WriteLine(mensaje);

@@ -2,6 +2,7 @@ using Animaciones;
 using Cruces;
 using Historial;
 using Info;
+using LuchadoresTorneo;
 using Personajes;
 using Presentacion;
 
@@ -113,14 +114,14 @@ namespace MenuPrincipal
                                 // Lógica para "Comenzar a Jugar"
                                 misAnimaciones.AnimacionCargaDeJuego();
                                 Console.Clear();
-                                List<Personaje> listaPersonajesTorneo = LuchadoresTorneo.Torneo.ObtenerListaPeleadores();
+                                List<Personaje> listaPersonajesTorneo = Torneo.ObtenerListaPeleadores();
                                 Juego.AparicionParaMostrarParticipantes(listaPersonajesTorneo);
                                 Juego.AparicionParaSorteo();
-                                Peleas.mostrarCruces(listaPersonajesTorneo, listado);
+                                Peleas.MostrarCruces(listaPersonajesTorneo, listado);
                                 break;
                             case 1:
                                 // Lógica de "Historial de Campeones"
-                                HistorialGanadores.mostrarListado(listado);
+                                HistorialGanadores.MostrarListado(listado);
                                 break;
                             case 2:
                                 // Lógica para "Informacion de jugadores"

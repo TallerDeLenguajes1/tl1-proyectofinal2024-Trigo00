@@ -6,39 +6,11 @@ namespace Pelea
     public class PeleaUsuario
     {
 
-        private static Random rand = new Random();
-
-        public static int devolverDanio(Personaje personajeUsuario)
-        {
-            double Ataque = (personajeUsuario.Caracteristicas.Fuerza * 1.5) * (personajeUsuario.Caracteristicas.Velocidad * 1.5) * (personajeUsuario.Caracteristicas.Energia * 1.5);
-            double Efectividad = rand.Next(50, 101);
-            double Defensa = (personajeUsuario.Caracteristicas.Resistencia * 1.5) * (personajeUsuario.Caracteristicas.Agilidad * 1.5) * (personajeUsuario.Caracteristicas.Energia * 1.5);
-            double CtteAjuste = 1000000;
-            double DanioProvocado = ((Ataque * Efectividad) - Defensa) / CtteAjuste;
-
-            return (int)DanioProvocado;
-        }
-
-        public static void contadorPelea()
-        {
-            for (int i = 3; i > 0; i--)
-            {
-                Console.Clear();
-                Console.WriteLine($"La pelea comienza en {i}");
-                Thread.Sleep(1000); // Espera 1 segundo
-            }
-
-            Console.Clear();
-            Console.WriteLine("¡La pelea ha comenzado!");
-        }
-
-
-
-        public static Personaje peleaPersonaje(Personaje peleadorUsuario, Personaje contrincante)
+        public static Personaje PeleaPersonaje(Personaje peleadorUsuario, Personaje contrincante)
         {
 
             // Determino aleatoriamente quién comienza
-            int numeroRandom = rand.Next(0, 2);// 0 a 1
+            int numeroRandom = rand.Next(0, 2);
             int primerTurno = 1;
 
             while (peleadorUsuario.Caracteristicas.Salud > 0 && contrincante.Caracteristicas.Salud > 0)
@@ -88,17 +60,17 @@ namespace Pelea
         private static void AtaqueEspecial(Personaje atacante, Personaje defensor)
         {
             Console.WriteLine("\nAtaque Especial");
-            int danio = devolverDanio(atacante);
+            int daño = DevolverDaño(atacante);
             bool respuesta = MostrarResultados.MostrarResultadosPreguntas();
 
             if (respuesta)
             {
-                danio *= 2;
-                AplicacionDanioYMensaje(atacante, defensor, danio);
+                daño *= 2;
+                AplicacionDañoYMensaje(atacante, defensor, daño);
             }
             else
             {
-                AplicacionDanioYMensaje(atacante, defensor, danio);
+                AplicacionDañoYMensaje(atacante, defensor, daño);
             }
 
         }
@@ -106,30 +78,42 @@ namespace Pelea
         {
             Console.WriteLine("\nDefensa Especial");
             bool respuesta = MostrarResultados.MostrarResultadosPreguntas();
-            int danio = devolverDanio(atacante);
+            int daño = DevolverDaño(atacante);
 
             if (respuesta)
             {
-                danio /= 2;
-                AplicacionDanioYMensaje(atacante, defensor, danio);
+                daño /= 2;
+                AplicacionDañoYMensaje(atacante, defensor, daño);
             }
             else
             {
-                AplicacionDanioYMensaje(atacante, defensor, danio);
+                AplicacionDañoYMensaje(atacante, defensor, daño);
             }
 
         }
 
-        private static void AplicacionDanioYMensaje(Personaje atacante, Personaje defensor, int danio)
+        private static void AplicacionDañoYMensaje(Personaje atacante, Personaje defensor, int daño)
         {
-            defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - danio;
+            defensor.Caracteristicas.Salud = defensor.Caracteristicas.Salud - daño;
             if (defensor.Caracteristicas.Salud < 0)
             {
                 defensor.Caracteristicas.Salud = 0;
             }
-            Console.WriteLine($"\n{atacante.Datos.Nombre} ataca a {defensor.Datos.Nombre} y causa {danio} puntos de daño. Salud restante de {defensor.Datos.Nombre}: {defensor.Caracteristicas.Salud}");
+            Console.WriteLine($"\n{atacante.Datos.Nombre} ataca a {defensor.Datos.Nombre} y causa {daño} puntos de daño. Salud restante de {defensor.Datos.Nombre}: {defensor.Caracteristicas.Salud}");
         }
 
+        private static int DevolverDaño(Personaje personajeUsuario)
+        {
+            double Ataque = (personajeUsuario.Caracteristicas.Fuerza * 1.5) * (personajeUsuario.Caracteristicas.Velocidad * 1.5) * (personajeUsuario.Caracteristicas.Energia * 1.5);
+            double Efectividad = rand.Next(50, 101);
+            double Defensa = (personajeUsuario.Caracteristicas.Resistencia * 1.5) * (personajeUsuario.Caracteristicas.Agilidad * 1.5) * (personajeUsuario.Caracteristicas.Energia * 1.5);
+            double CtteAjuste = 1000000;
+            double dañoProvocado = ((Ataque * Efectividad) - Defensa) / CtteAjuste;
+
+            return (int)dañoProvocado;
+        }
+
+        private static Random rand = new Random();
 
     }
 }

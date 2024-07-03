@@ -9,7 +9,7 @@ namespace Cruces
 {
     public class Peleas
     {
-        public static void mostrarCruces(List<Personaje> lista, List<HistorialGanadores> listado)
+        public static void MostrarCruces(List<Personaje> lista, List<HistorialGanadores> listado)
         {
             Personaje personajePrincipal = lista[0];
             Random rng = new Random();
@@ -55,7 +55,7 @@ namespace Cruces
             Thread.Sleep(4000);
             misAnimaciones.AnimacionRegresarAMenu();
             Console.Clear();
-            HistorialGanadores.cargarHistorial(ganadorFinales[0], listado);
+            HistorialGanadores.CargarHistorial(ganadorFinales[0], listado);
             Menu.MostrarOpciones(listado);
         }
 
@@ -108,8 +108,8 @@ namespace Cruces
                 // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
                 if (pelea.Item1 == personajeUsuario)
                 {
-                    PeleaUsuario.contadorPelea();
-                    ganador = PeleaUsuario.peleaPersonaje(pelea.Item1, pelea.Item2);
+                    misAnimaciones.ContadorPelea();
+                    ganador = PeleaUsuario.PeleaPersonaje(pelea.Item1, pelea.Item2);
                     MensajeSegunResultado(personajeUsuario, ganador);
                 }
                 else
@@ -117,8 +117,8 @@ namespace Cruces
                     // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
                     if (pelea.Item2 == personajeUsuario)
                     {
-                        PeleaUsuario.contadorPelea();
-                        ganador = PeleaUsuario.peleaPersonaje(pelea.Item2, pelea.Item1);
+                        misAnimaciones.ContadorPelea();
+                        ganador = PeleaUsuario.PeleaPersonaje(pelea.Item2, pelea.Item1);
                         MensajeSegunResultado(personajeUsuario, ganador);
                     }
                     else
@@ -128,7 +128,7 @@ namespace Cruces
                     }
 
                 }
-                subirEstadisticasGanador(ganador);
+                SubirEstadisticasGanador(ganador);
                 ganadores.Add(ganador);
             }
             return ganadores;
@@ -166,8 +166,8 @@ namespace Cruces
                 if (pelea.Item1 == personajeUsuario)
                 {
                     // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
-                    PeleaUsuario.contadorPelea();
-                    ganador = PeleaUsuario.peleaPersonaje(pelea.Item1, pelea.Item2);
+                    misAnimaciones.ContadorPelea();
+                    ganador = PeleaUsuario.PeleaPersonaje(pelea.Item1, pelea.Item2);
                     if (ganador != personajeUsuario)
                     {
                         Console.WriteLine("¡Perdiste!");
@@ -185,8 +185,8 @@ namespace Cruces
                     if (pelea.Item2 == personajeUsuario)
                     {
                         // Si el personajeUsuario está en esta pelea, llama a PeleaPersonaje
-                        PeleaUsuario.contadorPelea();
-                        ganador = PeleaUsuario.peleaPersonaje(pelea.Item2, pelea.Item1);
+                        misAnimaciones.ContadorPelea();
+                        ganador = PeleaUsuario.PeleaPersonaje(pelea.Item2, pelea.Item1);
                         if (ganador != personajeUsuario)
                         {
                             Console.WriteLine("¡Perdiste!");
@@ -211,7 +211,7 @@ namespace Cruces
             return ganadores;
         }
 
-        private static void subirEstadisticasGanador(Personaje ganador){
+        private static void SubirEstadisticasGanador(Personaje ganador){
 
             ganador.Caracteristicas.Agilidad += 2;
             ganador.Caracteristicas.Energia += 2;

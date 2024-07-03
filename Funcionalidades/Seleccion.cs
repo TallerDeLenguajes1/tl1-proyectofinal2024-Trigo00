@@ -17,7 +17,7 @@ namespace Seleccion
 
             // Calculo el ancho de cada columna
             int maxNombreLength = listaPersonajes.Max(p => p.Datos.Nombre.Length);
-            int columnWidth = maxNombreLength + 5; // Doy mas espacio entre columnas
+            int columnWidth = maxNombreLength + 5; 
 
             int seleccionIndex = 0;
 
@@ -143,7 +143,7 @@ namespace Seleccion
         }
 
 
-        public static List<Personaje> SeleccionarContrincantesAleatoriamente(List<Personaje> listaPersonajes, Personaje personajePrincipal)
+        private static List<Personaje> SeleccionarContrincantesAleatoriamente(List<Personaje> listaPersonajes, Personaje personajePrincipal)
         {
             Random random = new Random();
             List<Personaje> contrincantes = listaPersonajes.Where(p => p != personajePrincipal).OrderBy(p => random.Next()).Take(15).ToList();
@@ -155,13 +155,13 @@ namespace Seleccion
             return contrincantes;
         }
 
-        public static List<Personaje> SeleccionarContrincantesManualmente(List<Personaje> listaPersonajes, Personaje personajePrincipal)
+        private static List<Personaje> SeleccionarContrincantesManualmente(List<Personaje> listaPersonajes, Personaje personajePrincipal)
         {
             List<Personaje> seleccionados = new List<Personaje>();
             List<Personaje> disponibles = listaPersonajes.Where(p => p != personajePrincipal).ToList();
             int seleccionadosCount = 0;
             int seleccionIndex = 0;
-            int columnas = 3; // Número de columnas
+            int columnas = 3; 
             int maxNombreLength = disponibles.Max(p => p.Datos.Nombre.Length); //Busco el nombre que mas espacio usa
             int columnWidth = maxNombreLength + 5; // Ajusto el espacio entre columnas
             int filas = (int)Math.Ceiling(disponibles.Count / (double)columnas); //calculo cuántas filas son necesarias para organizar los elementos de disponibles en una cuadrícula con un número específico de columnas, redondeando hacia arriba para asegurarse de que todos los elementos entren en la cuadrícula.
@@ -233,7 +233,7 @@ namespace Seleccion
             return seleccionados;
         }
 
-        public static void MostrarPersonajesDisponibles(List<Personaje> disponibles, int seleccionIndex)
+        private static void MostrarPersonajesDisponibles(List<Personaje> disponibles, int seleccionIndex)
         {
             Console.SetCursorPosition(0, 3); // Posiciono el mouse debajo del título
 
@@ -264,18 +264,6 @@ namespace Seleccion
                     }
                 }
                 Console.WriteLine();
-            }
-        }
-
-
-        public static void MostrarContrincantes(List<Personaje> contrincantes)
-        {
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("Contrincantes seleccionados:");
-            foreach (var contrincante in contrincantes)
-            {
-                Console.WriteLine(contrincante.Datos.Nombre);
             }
         }
     }

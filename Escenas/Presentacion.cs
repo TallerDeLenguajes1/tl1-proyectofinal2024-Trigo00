@@ -1,3 +1,4 @@
+using ArmarJsonPjsConApi;
 using Historial;
 using Intro;
 using MenuPrincipal;
@@ -8,44 +9,10 @@ namespace Presentacion
     public class Juego
     {
 
-        public static void mostrarPuar()
+        public static async Task InicioJuego()
         {
+            await CargadorDatos.CargarDatosApi();
 
-            Console.WriteLine("              ,$$.       ,$$.      ");
-            Console.WriteLine("             ,$'$.       ,$'$.     ");
-            Console.WriteLine("             $'  $      $'   $     ");
-            Console.WriteLine("            :$    $;   :$    $;    ");
-            Console.WriteLine("            $$    $$   $$    $$    ");
-            Console.WriteLine("            $$  _.$bqgpd$._  $$    ");
-            Console.WriteLine("            ;$gd$$^$$$$$^$$bg$:    ");
-            Console.WriteLine("          .d$P^*'   \"*\"   *^T$b.  ");
-            Console.WriteLine("         d$$$    ,*\"   \"*.    $$$b ");
-            Console.WriteLine("        d$$$b._    o   o    _.d$$$b");
-            Console.WriteLine("       *T$$$$$P             T$$$$$P*");
-            Console.WriteLine("         ^T$$    :\"---\";    $$P^' ");
-            Console.WriteLine("            $._     ---'   _.$'    ");
-            Console.WriteLine("           .d$$P\"**-----**\"T$$b.   ");
-            Console.WriteLine("          d$$P'             T$$b  ");
-            Console.WriteLine("         d$$P                 T$$b ");
-            Console.WriteLine("        d$P'.'               .T$b");
-            Console.WriteLine("        --:                   ;--'");
-            Console.WriteLine("           |                   |   ");
-            Console.WriteLine("           :                   ;   ");
-            Console.WriteLine("            \\                 /    ");
-            Console.WriteLine("            .-.           .-'.    ");
-            Console.WriteLine("           /   .\"*--+g+--*\".   \\   ");
-            Console.WriteLine("          :   /     $$$     \\   ;  ");
-            Console.WriteLine("           --'     $$$       '--  ");
-            Console.WriteLine("                    :$$;           ");
-            Console.WriteLine("                     :$$           ");
-            Console.WriteLine("                     'T$bg+.____   ");
-            Console.WriteLine("                       'T$$$$$  :  ");
-            Console.WriteLine("                           \"**--'  ");
-
-        }
-
-        public static void InicioJuego()
-        {
             PresentacionJuego.Presentacion();
 
             int mensajeNumero = 0;
@@ -65,7 +32,7 @@ namespace Presentacion
 
                 Console.SetCursorPosition(0, 0);
 
-                mostrarPuar();
+                MostrarPuar();
 
                 Console.SetCursorPosition(40, 0);
 
@@ -281,20 +248,6 @@ namespace Presentacion
             }
         }
 
-        public static void AparicionCuandoNoQuiereJugar()
-        {
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            int mensajeNumero = 0;
-            List<string> mensajes = new List<string>();
-
-            mensajes.Add("Aun no estas listo por lo visto");
-            mensajes.Add("Vuelve cuando estes preparado, te estare esperando");
-
-            for (int i = 0; i < mensajes.Count; i++)
-            {
-                mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
-            }
-        }
 
         public static void AparicionAlGanarTorneo()
         {
@@ -322,7 +275,7 @@ namespace Presentacion
             Console.SetCursorPosition(0, 0);
 
             // Imprimo el ASCII de Puar
-            mostrarPuar();
+            MostrarPuar();
 
             // Imprimo el mensaje al costado
             Console.SetCursorPosition(40, 0);
@@ -348,6 +301,56 @@ namespace Presentacion
             Console.Clear();
 
             return mensajeNumero;
+        }
+
+        private static void MostrarPuar()
+        {
+
+            Console.WriteLine("              ,$$.       ,$$.      ");
+            Console.WriteLine("             ,$'$.       ,$'$.     ");
+            Console.WriteLine("             $'  $      $'   $     ");
+            Console.WriteLine("            :$    $;   :$    $;    ");
+            Console.WriteLine("            $$    $$   $$    $$    ");
+            Console.WriteLine("            $$  _.$bqgpd$._  $$    ");
+            Console.WriteLine("            ;$gd$$^$$$$$^$$bg$:    ");
+            Console.WriteLine("          .d$P^*'   \"*\"   *^T$b.  ");
+            Console.WriteLine("         d$$$    ,*\"   \"*.    $$$b ");
+            Console.WriteLine("        d$$$b._    o   o    _.d$$$b");
+            Console.WriteLine("       *T$$$$$P             T$$$$$P*");
+            Console.WriteLine("         ^T$$    :\"---\";    $$P^' ");
+            Console.WriteLine("            $._     ---'   _.$'    ");
+            Console.WriteLine("           .d$$P\"**-----**\"T$$b.   ");
+            Console.WriteLine("          d$$P'             T$$b  ");
+            Console.WriteLine("         d$$P                 T$$b ");
+            Console.WriteLine("        d$P'.'               .T$b");
+            Console.WriteLine("        --:                   ;--'");
+            Console.WriteLine("           |                   |   ");
+            Console.WriteLine("           :                   ;   ");
+            Console.WriteLine("            \\                 /    ");
+            Console.WriteLine("            .-.           .-'.    ");
+            Console.WriteLine("           /   .\"*--+g+--*\".   \\   ");
+            Console.WriteLine("          :   /     $$$     \\   ;  ");
+            Console.WriteLine("           --'     $$$       '--  ");
+            Console.WriteLine("                    :$$;           ");
+            Console.WriteLine("                     :$$           ");
+            Console.WriteLine("                     'T$bg+.____   ");
+            Console.WriteLine("                       'T$$$$$  :  ");
+            Console.WriteLine("                           \"**--'  ");
+
+        }
+        private static void AparicionCuandoNoQuiereJugar()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            int mensajeNumero = 0;
+            List<string> mensajes = new List<string>();
+
+            mensajes.Add("Aun no estas listo por lo visto");
+            mensajes.Add("Vuelve cuando estes preparado, te estare esperando");
+
+            for (int i = 0; i < mensajes.Count; i++)
+            {
+                mensajeNumero = MostrarMensajesPuar(mensajeNumero, mensajes);
+            }
         }
     }
 }

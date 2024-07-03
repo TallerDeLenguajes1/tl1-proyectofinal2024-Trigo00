@@ -9,13 +9,13 @@ namespace Historial
         public Personaje Ganador { get; set; }
         public DateTime Hora { get; set; }
 
-        public static void cargarHistorial(Personaje PersonajeGanador, List<HistorialGanadores> listaHistorial)
+        public static void CargarHistorial(Personaje PersonajeGanador, List<HistorialGanadores> listaHistorial)
         {
             DateTime horaActual = DateTime.Now;
             HistorialGanadores datos = new HistorialGanadores(PersonajeGanador, horaActual);
             listaHistorial.Add(datos);
         }
-        public static void mostrarListado(List<HistorialGanadores> listado)
+        public static void MostrarListado(List<HistorialGanadores> listado)
         {
             Console.WriteLine("GANADORES DEL TORNEO");
             Console.WriteLine();

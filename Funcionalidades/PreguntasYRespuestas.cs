@@ -6,11 +6,11 @@ namespace CuantoSabes
     {
         public string Pregunta { get; set; }
         public List<string> Respuestas { get; set; }
-        public int RespuestaCorrectaIndex { get; set; } // Índice de la respuesta correcta
-
+        public int IndiceRespuestaCorrecta { get; set; }
+        
         public bool EsRespuestaCorrecta(int indiceRespuestaElegida)
         {
-            return indiceRespuestaElegida == RespuestaCorrectaIndex;
+            return indiceRespuestaElegida == IndiceRespuestaCorrecta;
         }
     }
 
@@ -21,12 +21,6 @@ namespace CuantoSabes
         public CargandoPreguntasYRespuestas(string nombreArchivo)
         {
             ListaPreguntas = CargarPreguntasDesdeJson(nombreArchivo);
-        }
-
-        private List<PreguntasyRespuestas> CargarPreguntasDesdeJson(string nombreArchivo)
-        {
-            var jsonData = File.ReadAllText(nombreArchivo);
-            return JsonSerializer.Deserialize<List<PreguntasyRespuestas>>(jsonData);
         }
 
         public PreguntasyRespuestas ObtenerPreguntaAleatoria()
@@ -41,6 +35,12 @@ namespace CuantoSabes
             Random random = new Random();
             int index = random.Next(ListaPreguntas.Count); 
             return ListaPreguntas[index];
+        }
+
+        private List<PreguntasyRespuestas> CargarPreguntasDesdeJson(string nombreArchivo)
+        {
+            var jsonData = File.ReadAllText(nombreArchivo);
+            return JsonSerializer.Deserialize<List<PreguntasyRespuestas>>(jsonData);
         }
     }
 
