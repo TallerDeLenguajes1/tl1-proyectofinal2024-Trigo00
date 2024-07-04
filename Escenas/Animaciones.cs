@@ -34,11 +34,21 @@ namespace Animaciones
             {
                 Console.Clear();
                 Console.WriteLine($"La pelea comienza en {i}");
-                Thread.Sleep(1000); 
+                Thread.Sleep(1000);
             }
 
             Console.Clear();
             Console.WriteLine("¡La pelea ha comenzado!");
+            LimpiarBuffer(); 
+
+        }
+
+        public static void LimpiarBuffer()
+        {
+            while (Console.KeyAvailable)
+            {
+                Console.ReadKey(true);
+            }
         }
 
         private static void MostrarMensajeConCarga(string mensaje)

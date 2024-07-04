@@ -1,3 +1,4 @@
+using Animaciones;
 using AparicionesPuar;
 using ArmarJsonPjsConApi;
 using Historial;
@@ -113,6 +114,7 @@ namespace Presentacion
                 {
                     mensajeNumero = (mensajeNumero + 1) % mensajes.Count;
                     Thread.Sleep(4000);
+                    misAnimaciones.LimpiarBuffer(); 
                 }
             }
         }

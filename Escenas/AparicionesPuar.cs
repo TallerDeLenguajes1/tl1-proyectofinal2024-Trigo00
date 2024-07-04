@@ -1,7 +1,6 @@
+using Animaciones;
 using Personajes;
-using System;
-using System.Collections.Generic;
-using System.Threading;
+
 
 namespace AparicionesPuar
 {
@@ -68,6 +67,8 @@ namespace AparicionesPuar
                 }
             }
             Thread.Sleep(4000);
+            misAnimaciones.LimpiarBuffer();
+
         }
 
         public static void AparicionParaSorteo()
@@ -254,6 +255,9 @@ namespace AparicionesPuar
             Console.SetCursorPosition(Console.WindowWidth - 40, Console.WindowHeight - 2);
             Console.WriteLine("Ingrese S si desea saltar la cinemática");
 
+            // Limpiar el buffer antes de iniciar la espera de la tecla
+            misAnimaciones.LimpiarBuffer();
+
             // Esto espera que se ingrese la tecla
             DateTime fin = DateTime.Now.AddSeconds(4);
             while (DateTime.Now < fin)
@@ -265,6 +269,10 @@ namespace AparicionesPuar
                     {
                         mensajeNumero = mensajes.Count; // Salto al final de la lista de mensajes
                         break;
+                    }
+                    else
+                    {
+                        misAnimaciones.LimpiarBuffer(); // Limpiar el buffer si se presiona cualquier otra tecla
                     }
                 }
                 Thread.Sleep(100); // Hago una pequeña espera por el tema que no quiero sobreexigir al CPU

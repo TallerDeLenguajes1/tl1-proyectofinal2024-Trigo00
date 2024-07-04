@@ -53,6 +53,7 @@ namespace Cruces
             List<Personaje> ganadorFinales = SimularPeleaFinal(cruceFinal, personajePrincipal);
             Console.WriteLine($"¡El ganador del torneo es: {ganadorFinales[0].Datos.Nombre}!");
             Thread.Sleep(4000);
+            misAnimaciones.LimpiarBuffer();
             misAnimaciones.AnimacionRegresarAMenu();
             Console.Clear();
             HistorialGanadores.CargarHistorial(ganadorFinales[0], listado);
@@ -81,6 +82,7 @@ namespace Cruces
                 Console.WriteLine($"{i / 2 + 1}: {participantes[i].Datos.Nombre} vs {participantes[i + 1].Datos.Nombre}");
             }
             Thread.Sleep(4000);
+            misAnimaciones.LimpiarBuffer(); 
             Console.Clear();
         }
 
@@ -140,6 +142,7 @@ namespace Cruces
             {
                 Console.WriteLine("¡Perdiste!");
                 Thread.Sleep(3000);
+                misAnimaciones.LimpiarBuffer(); 
                 Console.Clear();
                 ApPuar.AparicionCuandoPerdesCombate();
 
@@ -148,6 +151,7 @@ namespace Cruces
             {
                 Console.WriteLine("¡Ganaste!, avanzas a la siguiente ronda.");
                 Thread.Sleep(3000);
+                misAnimaciones.LimpiarBuffer(); 
                 Console.Clear();
                 ApPuar.AparicionCuandoGanasCombate();
             }
@@ -172,6 +176,7 @@ namespace Cruces
                     {
                         Console.WriteLine("¡Perdiste!");
                         Thread.Sleep(3000);
+                        misAnimaciones.LimpiarBuffer(); 
                         Console.Clear();
                         ApPuar.AparicionCuandoPerdesCombate();
                     }
@@ -192,6 +197,7 @@ namespace Cruces
                         {
                             Console.WriteLine("¡Perdiste!");
                             Thread.Sleep(3000);
+                            misAnimaciones.LimpiarBuffer(); 
                             Console.Clear();
                             ApPuar.AparicionCuandoPerdesCombate();
                         }
