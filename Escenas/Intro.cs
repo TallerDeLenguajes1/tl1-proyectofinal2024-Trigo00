@@ -6,8 +6,8 @@ namespace Intro
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
 
-            string[] logo = MostrarLogo();
-            MostrarMensajeParaAvanzar(logo);
+            MostrarLogo();
+            MostrarMensajeParaAvanzar();
 
             // Espera que el usuario ingrese una tecla sin mostrarla en la consola
             Console.CursorVisible = false;
@@ -15,19 +15,15 @@ namespace Intro
             Console.Clear();
         }
 
-        private static void MostrarMensajeParaAvanzar(string[] logo)
+        private static void MostrarMensajeParaAvanzar()
         {
             string frase = "Pulse una tecla para iniciar...";
-            // int emptyLinesBeforeFrase = (logo.Length / 2) - 1; // Número de líneas vacías antes de la frase
-            // for (int i = 0; i < emptyLinesBeforeFrase; i++)
-            // {
-            //     Console.WriteLine();
-            // }
+    
             Console.WriteLine();
             Console.WriteLine(frase.PadLeft((Console.WindowWidth + frase.Length) / 2));
         }
 
-        private static string[] MostrarLogo()
+        private static void MostrarLogo()
         {
             string[] logo =
                         {   "",
@@ -38,12 +34,11 @@ namespace Intro
                 "|___/|_|_\\/_/ \\_\\___|\\___/|_|\\_|___/_/ \\_\\____|____| /___|"
             };
 
-            foreach (var line in logo)
+            foreach (var linea in logo)
             {
-                Console.WriteLine(line.PadLeft((Console.WindowWidth + line.Length) / 2));
+                Console.WriteLine(linea.PadLeft((Console.WindowWidth + linea.Length) / 2));
             }
-
-            return logo;
+    
         }
     }
 }

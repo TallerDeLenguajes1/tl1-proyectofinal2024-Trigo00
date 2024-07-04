@@ -92,21 +92,21 @@ namespace MenuPrincipal
                         break;
                     case ConsoleKey.Enter:
                         Console.Clear();
-                        // Muestro el título antes de salir del método
-                        int anchoConsola = Console.WindowWidth;
-                        string[] asciiLineas = asciiArt.Split('\n');
-                        foreach (var linea in asciiLineas)
-                        {
-                            int espaciosBlanco = (anchoConsola - linea.Length) / 2;
-                            if (espaciosBlanco > 0)
-                            {
-                                Console.Write(new string(' ', espaciosBlanco));
-                            }
-                            ImprimoCaracteres(linea);
-                            Console.WriteLine();
-                        }
-                        Console.WriteLine($"Seleccionaste: {opciones[seleccionIndex]}");
-                        Console.Clear();
+                        // // Muestro el título antes de salir del método
+                        // int anchoConsola = Console.WindowWidth;
+                        // string[] asciiLineas = asciiArt.Split('\n');
+                        // foreach (var linea in asciiLineas)
+                        // {
+                        //     int espaciosBlanco = (anchoConsola - linea.Length) / 2;
+                        //     if (espaciosBlanco > 0)
+                        //     {
+                        //         Console.Write(new string(' ', espaciosBlanco));
+                        //     }
+                        //     ImprimoCaracteres(linea);
+                        //     Console.WriteLine();
+                        // }
+                        // Console.WriteLine($"Seleccionaste: {opciones[seleccionIndex]}");
+                        // Console.Clear();
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
                         switch (seleccionIndex)
                         {

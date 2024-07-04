@@ -18,7 +18,6 @@ namespace Presentacion
 
             List<HistorialGanadores> listado = HistorialGanadores.CargarHistorialDesdeArchivo();
 
-            int mensajeNumero = 0;
             List<string> mensajes = new List<string>();
 
             mensajes.Add("Hola, mi nombre es Puar y yo sere tu guia durante esta experiencia");
@@ -27,6 +26,7 @@ namespace Presentacion
             mensajes.Add("Donde habran un total de 16 participantes listos para luchar y poner a prueba sus habilidades");
             mensajes.Add("Estas listo para comenzar?");
 
+            int mensajeNumero = 0;
             for (int i = 0; i < mensajes.Count; i++)
             {
                 Console.Clear();
@@ -39,7 +39,7 @@ namespace Presentacion
 
                 int windowHeight = Console.WindowHeight;
 
-                int textLineCount = mensajes[mensajeNumero].Split('\n').Length;
+                int textLineCount = mensajes[mensajeNumero].Split('\n').Length; // Split('\n') divide el mensaje en un array de cadenas, utilizando el carácter de nueva línea ('\n') como delimitador
 
                 int paddingLines = (windowHeight - textLineCount) / 2;
 
