@@ -57,6 +57,7 @@ namespace Cruces
             misAnimaciones.AnimacionRegresarAMenu();
             Console.Clear();
             HistorialGanadores.CargarHistorial(ganadorFinales[0], listado);
+            misAnimaciones.LimpiarBuffer();
             Menu.MostrarMenuPrincipal(listado);
         }
 

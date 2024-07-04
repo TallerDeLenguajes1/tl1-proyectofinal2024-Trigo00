@@ -1,3 +1,5 @@
+using Animaciones;
+
 namespace Intro
 {
     public class PresentacionJuego
@@ -10,6 +12,7 @@ namespace Intro
             MostrarMensajeParaAvanzar();
 
             // Espera que el usuario ingrese una tecla sin mostrarla en la consola
+            misAnimaciones.LimpiarBuffer();
             Console.CursorVisible = false;
             Console.ReadKey(true);
             Console.Clear();

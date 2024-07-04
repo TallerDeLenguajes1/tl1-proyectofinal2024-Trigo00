@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Animaciones;
 using Historial;
 using MenuPrincipal;
 using Personajes;
@@ -27,6 +28,7 @@ namespace Info
             Console.CursorVisible = false;
             Console.ReadKey(true);
             Console.Clear();
+            misAnimaciones.LimpiarBuffer();
             Menu.MostrarMenuPrincipal(listado);
         }
 

@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Animaciones;
 using MenuPrincipal;
 using Personajes;
 
@@ -37,10 +38,12 @@ namespace Historial
             }
 
             Console.WriteLine();
+            misAnimaciones.LimpiarBuffer();
             string frase = "Pulse una tecla regresar al menu...";
             Console.WriteLine(frase);
             Console.CursorVisible = false;
             Console.ReadKey(true);
+            misAnimaciones.LimpiarBuffer();
             Menu.MostrarMenuPrincipal(listado);
         }
 
